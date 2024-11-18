@@ -1,0 +1,573 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <!-- meta tag -->
+     <meta charset="utf-8">
+     <!-- <title>Register</title> -->
+     <meta name="description" content="">
+     <!-- responsive tag -->
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Enquiry Form JS and CSS Start-->
+     <script src="static/assets/js/register_form.js"></script>
+     <link rel="stylesheet" type="text/css" href="static/assets/css/register_form.css">
+     <!-- Enquiry Form JS and CSS End-->
+     <!-- favicon -->
+     <link rel="apple-touch-icon" href="apple-touch-icon.html">
+     <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/fav.png">
+     <!-- Bootstrap v4.4.1 css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+     <!-- font-awesome css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.min.css">
+     <!-- animate css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/animate.css">
+     <!-- off canvas css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/off-canvas.css">
+     <!-- linea-font css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/fonts/linea-fonts.css">
+     <!-- flaticon css  -->
+     <link rel="stylesheet" type="text/css" href="static/assets/fonts/flaticon.css">
+     <!-- Main Menu css -->
+     <link rel="stylesheet" href="static/assets/css/rsmenu-main.css">
+     <!-- spacing css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/rs-spacing.css">
+     <!-- style css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+     <!-- responsive css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/responsive.css">
+
+     <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap_5_3.css">
+
+     <link rel="stylesheet" type="text/css" href="static/assets/css/terms_conditions.css">
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <title>Register</title>
+    <style>
+        .dropbtn {
+          /* background-color: #04AA6D; */
+          color: white;
+          /* padding: 16px; */
+          /* font-size: 16px; */
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 120px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        /* .dropdown-content a:hover {background-color: #ddd;} */
+        
+        .dropdown:hover .dropdown-content {display: block;}
+/*         
+        .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+        .himg{
+            visibility:'hidden';
+        }
+        
+                </style>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errors = [];
+
+            if (username.length < 3 || username.length > 15) {
+                errors.push("Username must be between 3 and 15 characters long.");
+            }
+            // if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+            //     errors.push("Username can only contain letters, numbers, and underscores.");
+            // }
+            if (password.length < 6) {
+                errors.push("Password must be at least 6 characters long.");
+            }
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false;  // Prevent form submission
+            }
+            return true;  // Allow form submission
+        }
+
+        function displayFullName() {
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+            document.getElementById('username').value = firstName + '.' + lastName;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Main content Start -->
+    <div class="main-content">
+        <!--Full width header Start-->
+       
+        <!--Full width header End-->
+
+        <!-- Main content Start -->
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <div class="breadcrumbs-img">
+                    <img src="static/assets/images/breadcrumbs/graduate.png" alt="Breadcrumbs Image">
+                </div>
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">Register</h1>
+                    <!--
+                    <ul>
+                        <li>
+                            <a class="active" href="index-2.html">Home</a>
+                        </li>
+                        <li>Course</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Popular Courses Section Start -->
+            <div class="rs-cart orange-color pt-100 pb-100 md-pt-120 md-pb-70">
+                <div class="container">
+                    <div class="cart-wrap">
+
+
+
+
+                        <h1 style="text-align: center;">Register</h1>
+                        <form action="{{ url_for('register') }}" method="POST" onsubmit="return validateForm()" style="text-align: center;">
+                            {% if errors %}
+                            <ul>
+                                {% for error in errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                                {% endif %}
+                            <!-- <div class="row col-md-6"> -->
+                                <!-- <div class="col-md-6"> -->
+                            <!-- <label for="username">Username:</label> -->
+                            <!-- </div> -->
+                            <div class="form-group col-md-12">
+
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="first_name" style="float: right;font-size: large;">First Name:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="first_name" name="first_name" class="form-control"  oninput="displayFullName()" required>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="middle_name" style="float: right;font-size: large;">Middle Name:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="middle_name" name="middle_name" class="form-control"  oninput="displayFullName()" required>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="last_name" style="float: right;font-size: large;">Last Name:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="last_name" name="last_name" class="form-control"  oninput="displayFullName()" required>
+                                        <input type="text" id="username" name="username" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="email_id" style="float: right;font-size: large;">Email:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="email" id="email_id" name="email_id" class="form-control" required>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <label for="mobile" class="form-label">Email address</label> -->
+                                    <div class="col-md-4">
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Contact Number" required> -->
+                                        <label for="mobile" style="float: right;font-size: large;">Contact Number:</label>
+                                        <!-- <input type="tel" class="form-control form-control-sm" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required> -->
+                                        
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" placeholder="Contact Number" onkeypress="enableOTPbtn()" required> -->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Contact Number" required> -->
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required>
+                                        <!-- <input type="tel" class="form-control form-control-sm" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required> -->
+                                        
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" placeholder="Contact Number" onkeypress="enableOTPbtn()" required> -->
+                                    </div>
+                                    <div class="row form-group col-md-4 mb-3">
+                                    <!-- <div class="col-md-6">
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required>
+                                    </div> -->
+                                    <div class="col-md-3">
+                                        <input type="hidden" class="form-control form-control-sm" id="num_verify" name="num_verify" placeholder="Number Verify" aria-label="Number Verify" required>
+                
+                                        <img src="/static/assets/images/verify_logo.png" class="form-control himg" id="rf_verify_image" name="rf_verify_image" style="height: 32px;width: 44px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <button type="button" id="otpbtn" name="otpbtn" class="disabled btn btn-warning" onclick="sendOtp()" style="height: 32px;font-size: small; float: left;" disabled="">Send OTP</button>
+                                    </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="username" style="float: right;font-size: large;">Password:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="password" id="password" name="password" class="form-control" required>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-8">
+                            <input type="text" id="username" name="username" class="form-control" style="margin:0 auto; text-align: center;" required>
+                            <input type="text" id="username" name="username" class="form-control col-md-4" style="margin:0 auto; text-align: center;" required>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control col-xs-4" required>
+                            <br>
+                            </div> -->
+
+                           
+  <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button> -->
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button> -->
+  <!--Term & conditions Modal -->
+  <!-- <div class="collapse" id="collapseExample">
+    <div class="card">
+      Terms and conditions
+      <input type="checkbox" id="tandc1" name="tandc1" value="1"><label for="tandc1"> I have read the Terms and Conditions</label>
+    </div>
+  </div> -->
+
+  <!---------------- Terms and conditions New Start ----------------->
+  <button id="openPopupt" type="button" onclick="Openpopupfun()">Open Terms and Conditions</button>
+
+  <!---------------- Terms and conditions New Stop ----------------->
+
+  <input type="checkbox" id="tandc2" name="tandc2" value="1" onchange="checktermsvalue()">
+
+                            <button type="submit" id="register_btn" >Register</button>
+                            <!-- </div> -->
+                            <script>
+                                // Disable OTP Button If Number is Less than 10 Digit
+                            
+                                    // let up = document.getElementById('GFG_UP');
+                                    // let down = document.getElementById('GFG_DOWN');
+                                    let el = document.getElementById('mobile');
+                                    // up.innerHTML = 
+                                    //       "Type in the input box to determine the pressed.";
+                                    el.addEventListener('keydown', function (event) {
+                                        const key = event.key;
+                                        if (key === "Backspace" || key === "Delete") {
+                                            disableOTPButton();
+                                            // alert('B Pressed');
+                                            // $('#GFG_DOWN').html(key + ' is Pressed!');
+                                        }
+                                    }); 
+                                            
+                                    // Disable Submit Button By Default
+                            
+                                    // Get a reference to the button element
+                                    const sbutton = document.getElementById("register_btn");
+                                    // Disable the button
+                                    sbutton.disabled = true;
+                        
+                                    ////////////////////////////////////////
+                        
+                                    ////// Display Verified Image Logo
+                                    function hideImage() {
+                                        var img = document.getElementById('rf_verify_image');
+                                        img.style.visibility = 'hidden';
+                                    }
+                                    hideImage()
+                        
+                        
+                                    //////////////////////////////////////////////////////
+                            </script>
+                        
+                            </form>
+                            
+                             <!-- OTP Popup -->
+                             <div id="otpPopup" class="popup hidden">
+                                <div class="popup-content">
+                                    
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="float: right;" onclick="cancelOtpPopup()"></button>
+                                    <h3>Verify Mobile Number</h3>
+                                    <label style="font-size: 14px;">OTP has been sent to you on your mobile number, please enter it below.</label>
+                                    <div id="otpMessage" class="message"></div>
+                                    <div>
+                                        <input type="text" id="otp1" class="otp-field" maxlength="1" oninput="moveFocus(event, 'otp2')" />
+                                        <input type="text" id="otp2" class="otp-field" maxlength="1" oninput="moveFocus(event, 'otp3')" />
+                                        <input type="text" id="otp3" class="otp-field" maxlength="1" oninput="moveFocus(event, 'otp4')" />
+                                        <input type="text" id="otp4" class="otp-field" maxlength="1" />
+                                    </div>
+                                    
+                                    
+                        
+                                    <div>
+                                        <button class="btn btn-primary mt-3" id="verify_otp_btn" name="verify_otp_btn" onclick="verifyOtp()" style="font-size: small;">Verify OTP</button>
+                                        <a onclick="resendOtp()" href="javascript:void(0);" class="acenter mt-3">Resend OTP</a>
+                                        <!-- <button class="btn btn-primary" onclick="verifyOtp()" style="font-size: small;">Verify OTP</button> -->
+                                    </div>
+                                    
+                        
+                                    <!-- <button type="button" class="btn btn-warning" onclick="resendOtp()" style="font-size: small;">Resend OTP</button> -->
+                        
+                                    <!-- <button class="btn btn-danger" onclick="document.getElementById('otpPopup').style.display = 'none';" style="font-size: small;">Cancel</button> -->
+                                </div>
+                            </div>
+
+     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!--Terms and Condition Modal -->
+
+<div id="popupt" class="popupt">
+    <div class="popupt-content">
+
+        <span class="close" id="closePopupt">&times;</span>
+        <h2>Terms and Conditions</h2>
+        <p>Please read and accept our terms and conditions.
+
+            <h4>1. Introduction</h4>
+Attention: please read these terms of use ("terms") carefully before using the www.bsebti.com web site (the "Site").This site, www.bsebti.com is operated by BSE Institute Limited, (hereinafter referred to as "BSE Institute Ltd.").Using this site indicates that you have read and accepted these terms. If you do not accept these terms, you are not authorized to use this site. These terms govern your use of the site, any content (such as the educational services, text, data, information, software, graphics, or photographs) that BSE Institute Limited (“BIL”), may make available through the site (collectively, "Materials") and any services that BIL may provide through the site (collectively, "services") materials, and services are referred to in these terms collectively as the "BIL website”.
+
+By (a) using or accessing the Company Products / Services, including, but not limited to downloading, accessing, installing or using the Software; (b) paying for someone else to use or access the Company Products / Services, you agree to the terms and conditions set forth in these Terms of Use (the "Terms").
+
+THESE TERMS, INCLUDING THIS INTRODUCTORY SECTION, CREATE A BINDING LEGAL CONTRACT BETWEEN YOU AND THE COMPANY. BY USING THE COMPANY PRODUCTS / SERVICES, YOU REPRESENT AND WARRANT THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT ACCEPT THESE TERMS, YOU MUST NOT USE - AND ARE NOT AUTHORIZED TO USE - ALL OR ANY PORTION OF THE COMPANY PRODUCTS / SERVICES.
+
+For the purposes of this agreement, "you" means a parent / guardian or any other entity / person / child acting for on your behalf who pays for access to the Company Products / Services as well as the student, or other User (as defined below) who accesses or uses the Company Products / Services. If you are a parent, guardian, or other person who enables a minor person/entity/child to access the Company Products / Services, you agree and undertake to take responsibility of such person for the purposes of making us whole in case of damages or indemnification that could properly lie against a child, if not for his or her age. If you are using or opening an account to use the Company Products / Services on behalf of a Company, entity or organization (each a "Subscribing Entity"), then you represent and warrant that you: (i) are an authorized representative of that Subscribing Entity with the authority to bind such entity to these Terms, and (ii) agree to be bound by these Terms on behalf of such Subscribing Entity.<br>
+
+<h4>2. Privacy</h4>
+Any personal information submitted in connection with your use of the Site is subject to our Privacy Policy, the terms of which are separately incorporated on the website Please review our Privacy Policy to understand our practices.<br>
+
+<h4>3. General</h4>
+1. The Company Products / Services enable students, parents / guardians, colleges / other Educational Institutions and Subscribing Entities (collectively, "Users") to connect with independent consultants, instructors / our faculties (the "Instructors") who provide live and recorded instructions, tutoring, and learning services online through Webinars or such other mode and media available from time to time (the "Courses"). Each and every product / services sold through this website is independent and may differ from time to time. The Live sessions, will be recorded and made available at a future date to such students, who may intend to purchase such services through our website. The recorded sessions shall be made available through such mode and media as available, and thought fit for delivery of the same. The Services include, without limitation, facilitating and hosting Courses, and taking feedback from Users.<br>
+
+2. You understand and agree that these Terms are entered into in consideration of your use of the Company Products / Services and other goods and valuable consideration, the receipt and sufficiency of which are hereby acknowledged.
+
+3. Changes to these Terms. Company reserves the right to revise these Terms in its sole discretion at any time and without prior notice to you other than by posting the revised Terms on the Site. Any revisions to the Terms are effective upon posting. The Terms will be identified as of the most recent date of revision. You should visit this page regularly to ensure your continued acceptance of these Terms. Your continued use of the Company Products / Services after any revision to these Terms constitutes your binding acceptance of the revised Terms. Notwithstanding the preceding sentences of this section, no revisions to these Terms will apply to any dispute between you and the Company that arose prior to the date of such revision.
+
+4. Evolving Nature of Services. The Company Products / Services are new and subject to change at any time. We are continually looking to improve the Company Products / Services but if you are at any time dissatisfied with the Company Products / Services, then your sole remedy is to discontinue use of the Company Products / Services. However, we do want to hear from our Users, so do not hesitate to contact us via training@bseindia.com to give your valuable feedback.
+
+5. Electronic Notices. By using the Company Products / Services or communicating with us, you agree that we may communicate with you electronically regarding security, privacy, and administrative issues relating to your use of the Company Products / Services. If we identify / learn of a security / privacy breach, we may attempt to notify you electronically by posting a notice on the Site or sending an email to you.<br>
+
+<h4>4. Connectivity Costs and Equipment</h4>
+You are solely responsible for all service, telephony and/or other fees and costs associated with your access to and use of the Company Products / Services, including, but not limited to, any data charges imposed by a wireless carrier or Internet service provider, and for obtaining and maintaining all telephone, computer hardware, and other equipment required for such access and use.<br>
+
+<h4>5. General Disclaimer</h4>
+We are not responsible or liable for any interactions involved between the Instructors / faculties and their respective clients. We are not responsible for disputes, claims, losses, injuries, or damage of any kind that might arise out of or relate to conduct of Instructors / faculties or Users, including, but not limited to, any User's reliance upon any information provided by an Instructor / faculties.
+The Company Products /Services are controlled and operated by Company from its offices located in various cities of India or from such other locations. Company makes no representation that materials made available through Company Products / Services are appropriate or available for use in other locations. Those who choose to access or use the Company Products / Services from other locations, including from outside India, do so on their own initiative and are responsible for compliance with local laws, if and to the extent local laws are applicable. Access to or use of the Company Products / Services from jurisdictions where the contents or practices of the Company Products / Services are illegal, unauthorized or penalized is strictly prohibited.<br>
+
+<h4>6. Conduct</h4>
+You may only access the Company Products / Services for lawful purposes. You are solely responsible for the knowledge of and adherence to any and all laws, rules, and regulations pertaining to your use of the Company Products / Services. You agree not to use the Company Products / Services or the Company Content (as defined below) to recruit, solicit, or contact in any form Instructors/ faculties or potential users for employment or contracting for a business not affiliated with us without our advance written permission, which may be withheld in our sole discretion. You assume any and all risks from any meetings or contact between you and any Instructors / faculties or other Users of Company Products / Services. You should be careful before meeting any Instructor / faculties or other User in person and should only do so in public. Remember to always be safe.<br>
+
+<h4>7. Specific Obligations of Users using the Site</h4>
+As a User, you agree that:
+
+You have read, understood, and agree to be bound by the pricing information (see the Pricing section below) before using the Site or registering for a Course;
+If you are under the age of 18, you have obtained parental or legal guardian consent before using the Site, or registering for a Course.
+You also agree that you will not do any of the following on or through the Company Products / Services:
+upload, post or otherwise transmit any unsolicited or unauthorized advertising, promotional materials, junk mail, spam, chain letters, pyramid schemes or any other form of solicitation (commercial or otherwise);
+post any inappropriate, offensive, racist, hateful, sexist, sex-related, false, misleading, infringing, defamatory or libelous content;
+manipulate or interfere with the Company Products / Services;
+reproduce, distribute, publicly display, publicly perform, communicate to the public, create derivative works from or otherwise use and exploit any Submitted Content or other content obtained from any Company Products / Services without our express written permission excluding only reproductions made for your personal, non-commercial use;
+disclose any information to an Instructor / faculty that could be considered personally identifiable information including, but not limited to, your full name, address, telephone number, email address, PAN Number and  password or any other information that could be used to identify or locate you; and
+solicit personal information from any Instructor / faculty, and agree that if any Instructor / faculty ever discloses such information to you or asks you for any personal information, you agree to immediately report this to us via training@bseindia.com<br>
+
+<h4>8. Registration and Identity Protection</h4>
+To use and/or avail certain Company Products / Services, you will need to register and obtain an account, username and password. When you register, the information you provide to us during the registration process will, help us in offering content, customer service, and network management. You are solely responsible for maintaining the confidentiality of your account, username, and password (collectively, the "Account") and for all activities and liabilities associated with or occurring under your Account. You must notify us (a) immediately of any unauthorized use of your Account and any other breach of security, and (b) ensure that you exit from your Account at the end of each Course. We cannot and will not be responsible for any loss or damage arising from your failure to comply with the foregoing requirements or as a result of use of your Account, either with or without your knowledge, prior to your notifying us of unauthorized access to your Account. However, you agree that you will be liable for any losses incurred by us or another party due to any use of your Account, excluding only uses following your notification to us of unauthorized access to your Account.
+
+You may not transfer your Account to any other person and you may not use anyone else's Account at any time without the permission of the account holder. In cases where you have authorized or registered another individual, including a minor, to use your Account, you are fully responsible for
+
+(i) the online conduct of such User;
+(ii) controlling the User's access to and use of the Services; and
+(iii) the consequences of any misuse.
+
+
+Could we address issues related to parallel access – one user id accessing in parallel from two sources – in this case the account is suspended / terminated.
+For additional information on how we use your information, please see our Privacy Policy.<br>
+
+<h4>9. Accuracy of Account Information</h4>
+In consideration of your use of Company Products / Services, you agree to (a) provide true, accurate, current and complete information about yourself as prompted by Company's registration form (such information being "Your Data"), (b) maintain and promptly update Your Data to keep it true, accurate, current and complete; and (c) comply with these Terms. If you provide any information that is untrue, inaccurate, not current, incomplete or misleading, or if we believe that such information is untrue, inaccurate, not current incomplete or misleading, then we reserve the right to suspend or terminate your account and refuse or restrict any and all current or future use of the Company Products / Services, without any liability to you.<br>
+
+<h4>10. Copyright</h4>
+You acknowledge that the Software, the technology underlying the Services, and all other software, designs, materials, information, communications, text, graphics, links, electronic art, animations, illustrations, artwork, audio clips, video clips, photos, images, and other data or copyrightable materials, including the selection and arrangements thereof, provided or made available to you in connection with the Company Products / Services (collectively, the "Company Content") are the proprietary property of Company and its affiliated and/or third party providers and suppliers (the "Third Parties") and are protected, without limitation, pursuant to Indian copyright and other Intellectual property laws applicable from time to time.<br>
+
+<h4>11. Other Prohibited Uses</h4>
+In using the Company Products, you further agree not to:
+
+Upload or otherwise transmit to or through the Services any information or content that infringes any patent, trademark, trade secret, copyright or other proprietary rights of any party.
+Upload or otherwise transmit to or through the Services any unlawful, harmful, harassing, defamatory, threatening, vulgar, sexually explicit, hateful or otherwise objectionable material of any kind, any material that can cause harm or delay to the Company Products or computers of any kind;
+Create a false identify or impersonate another person or entity in any way;
+Restrict, discourage or inhibit any person from using the Company Products / Services, disclose personal information about a third person on or through Company Products or obtained from Company Products / Services without the consent of such person or collect information about Users of the Company Products / Services;
+Undertake, cause, permit or authorize the modification, creation of derivative works, translation, reverse engineering, decompiling, disassembling or hacking of any aspect of the Company Products / Services or any part thereof, or attempt to do any of the foregoing, except and solely to the extent permitted by these Terms, the authorized features of the Company Products / Services, or by law, or otherwise attempt to use or access any portion of the Services other than as intended by Company;
+Gain unauthorized access to the Products /Services, to other Users' accounts, names or personally identifiable information, or to other computers or websites connected or linked to the Services;
+Reproduce, distribute, publicly display, publicly perform, communicate to the public, sell, trade, resell or exploit any portion of the Company Products, use of the Company Products, access to the Company Products or content obtained through the Company Products, for any purpose other than expressly permitted by these Terms, including, by way of example and not limitation, by doing or engaging in any of the following without Company's express written consent:
+framing, embedding and/or passing off Submitted Content obtained from the Company Products / Services in such a manner as to present them as originating from a source other than the Company Products / Services;
+copying, caching or reformatting any Content for commercial purposes in any manner whatsoever, whether by copying to physical or electronic media for purposes of buffering delivery or converting transmissions from the Company Products / Services to alternative delivery formats;
+altering, defacing, mutilating or otherwise bypassing any approved software through which the Company Products / Services are made available; and
+using any trademarks, service marks, design marks, logos, photographs or other content belonging to the Company or obtained from the Company Products / Services.
+Post, transmit or otherwise make available any virus, worm, spyware or any other computer code, file or program that may or is intended to damage or hijack the operation of any hardware, software or telecommunications equipment, or any other aspect of the Company Products / Services or communications equipment and computers connected to the Company Products / Services;
+Remove, disable, damage, circumvent or otherwise interfere with any security-related features of the Company Products, features that prevent or restrict the use or copying of any part of the Company Products / Services or any content accessible on or through Company Products / Services, or features that enforce limitations on the use of the Company Products or any content accessible on or through Company Products / Services;
+Use any scraper, spider, robot or other automated means of any kind to access the Company Products / Services, except and solely to the extent permitted by these Terms and the features of the Company Products / Services, deep-link to any feature or content on the Site, bypass our robot exclusion headers or other measures we may use to prevent or restrict access to the Site or Services;
+Interfere with or disrupt the Company Products / Services, networks or servers connected to the Company Products / Services or violate the regulations, policies or procedures of such networks or servers;
+Violate any applicable laws or regulations or these Terms; or Assist or permit any persons in engaging in any of the activities described above.
+Any unauthorized or prohibited use of the Company Products / Services or Company Content may subject the offender to civil liability and criminal prosecution under applicable laws of India.<br>
+
+<h4>12. Permitted Use of Company Content and Company Products/ Services; Reservation of Rights</h4>
+You may download and print a reasonable number of copies of documentation provided or available in connection with the Company Content for noncommercial personal or educational use only and we grant you a limited, non-perpetual, revocable, nontransferable, non-assignable, non-exclusive, royalty-free license to access and utilize the Services, the Software and the other Company Content for noncommercial personal or educational purposes while these Terms are in full force and effect; provided that (a) any permitted copies of documentation provided or available in connection with the Company Content contain, in an unmodified form, (i) all language designations contained in the materials originally provided to you by us and (ii) all copyright or other proprietary rights notices contained in the materials originally provided to you by us and an original source attribution to us and/or the applicable Third Parties; and (b) you will not modify any of the Company Content except as approved by us in advance in writing. You acknowledge that we and/or Third Parties, as applicable, hold all right, title and interest in and to all tangible and intangible aspects of the Company Content and the Company Products / Services, including without limitation, all patents, copyrights and trade secrets pertaining thereto, and that, except for the limited rights set forth above, you do not acquire any intellectual property right or license in any of the foregoing by downloading or printing the Company Content or otherwise, including, without limitation, by accessing or using the Company Products / Services or the Company Content. These rights granted to you are revocable by us in accordance with these Terms and shall expire upon the termination of these Terms.
+There are no implied licenses granted in these Terms.
+
+<h4>13. Pricing</h4>
+Joining the Site, browsing for Courses, on the Site is free. Company may change its fee policies at any time in its sole discretion, including charging for access to the Site.  Unless otherwise stated, all fees are quoted in Indian Rupees and US Dollars. The products and Services offered through this website will be charged in Rupees to the Citizens of India and those using the website from the territory of India, however the products / services offered to Citizens other than Indian and accessing the website from places outside the territory of India will be charged in US Dollars and the same will be converted into rupee as per the Reserve Bank of India Exchange conversion rate for the day when the transaction is done. You are responsible for paying all fees and applicable taxes associated with the Site in a timely manner with a valid payment method that is accepted by the Company in its sole discretion. Once the payment transaction is done and the payment has been received at our end we will send you the link of the Program, if required on your registered email id. If your payment method fails or your account is past due, then we may collect fees owed using other collection mechanisms at our discretion. This may include charging other payment methods on file with us and/or authorized representative and/or legal counsel. We may also block your access to any Company Products / Services pending resolution of any amounts due by you to the Company.
+
+The pricing for each and every product / Services available on the website may differ from time to time and is subject to change. The Company has the sole discretion right to revise the prices of the products / Services made available through our website.
+
+<h4>14. Refunds</h4>
+In case of any cancellation of Scheduled Program due to any technical / non technical reasons then in that case the program or the webinar will be rescheduled and the fresh link for the same will be sent to the participants / users. However in case the participant / user if not willing to attend the webinar / program on the revised scheduled date and time then he / she can claim refund only within one week from the date of the webinar and not later. The user / participant, if he is willing shall be allowed to attend the same program / webinar if it is rescheduled again within a reasonable period of time i.e. 1-2 months maximum without allowing the refund of the fees paid for the program. The refund will be allowed only by making an application to the Company by sending it through Email to training@bseindia.com, stating the reasons for not attending the webinar / program.  Please note that if we believe that you are abusing our refund policy in our sole discretion, we reserve the right to suspend or terminate your account and refuse or restrict any and all current or future use of the Company Products / Services, without any liability to you. All sales of Courses through BSE Varsity websites are final.
+
+The Chargeback shall be allowed to the user / Participant only within 90 days from making the payment for the transaction. No Chargeback will be entertained in any case later after the period of 90 days have elapsed. The chargeback request will have to be properly routed through the authorized payment gateway mechanism, through which the payment has been made following the   procedures available on the websites of the payment gateway vendors from time to time. The chargeback will not be entertained directly from the user in any case and will have to be routed through the payment gateway vendor solely.
+
+<h4>15. Links to third-party websites</h4>
+Links on the BIL site to third-party websites are provided solely as a convenience to you. If you use these links, you will leave the BIL Websites. BIL is not obligated to review such third-party websites, does not control such third-party websites, and is not responsible for any such third-party websites (or the products, services, or content available through the same). Thus, BIL does not endorse or make any representations about such third-party websites, any information, software, products, services, or materials found there or any results that may be obtained from using them. If you decide to access any of the third-party websites linked to from the BIL Network, you do this entirely at your own risk.
+
+Linking to this Site
+
+You may create links to this Site from other websites, but only in accordance with the following terms and in compliance with all applicable laws.
+Absent BIL's written authorization otherwise, a website that links to this Site:
+
+may link to, but shall not replicate, any Materials (including any BIL logo);
+shall not create a browser or border environment around any Materials;
+shall not imply that BIL endorses such website or any products, services, or content available through such website;
+shall not misrepresent its relationship with BIL;
+shall not present false or misleading information about BIL, its products, or its services;
+shall not contain content that could be construed as distasteful, offensive, or controversial; and
+shall contain only content that is appropriate for all age groups.
+YOU AGREE THAT COMPANY WILL NOT BE RESPONSIBLE OR LIABLE FOR ANY LOSS OR DAMAGE OF ANY SORT INCURRED AS THE RESULT OF ANY SUCH DEALINGS YOU MAY HAVE ON OR THROUGH A THIRD PARTY SITE OR AS THE RESULT OF THE PRESENCE OF ANY CONTENT OR ADVERTISING ON THE THIRD PARTY SITES.
+
+<h4>16. Trademarks</h4>
+The trademarks, service marks, and logos (the "Trademarks") used and displayed on the Site or in any Company Content are registered and unregistered Trademarks of us and others and are protected, without limitation, pursuant to Indian Trademark and Intellectual Property Laws. Nothing on the Company Products / Services or otherwise should be construed as granting, by implication, estoppel, or otherwise, any license or right to use any Trademark displayed on the Company Products / Services or in connection with the Company Products/ Services or Company Content or Software, without the written permission of the applicable Trademark owner. We aggressively enforce our Intellectual Property Rights to the fullest extent of the law. You may not use the Trademarks, either ours or others, in any way without the prior written permission of the applicable Trademark owner. We prohibit use of our logo as a "hot" link to any other World Wide Web site unless approved by us in advance in writing.
+
+<h4>17. Disclaimer; Warranty Disclaimer</h4>
+YOU UNDERSTAND THAT WHEN USING THE COMPANY PRODUCTS / SERVICES, PARTICIPATING IN OR OBTAINING INFORMATION FROM A COURSE, OR ACCESSING COMPANY CONTENT, YOU MAY BE EXPOSED TO PRODUCTS, PHOTOGRAPHS, MUSIC, ARTWORK, MESSAGES, INSTRUCTIONAL INFORMATION, AND OTHER MATERIALS FROM A VARIETY OF SOURCES, AND THAT COMPANY IS NOT RESPONSIBLE FOR THE ACCURACY, INTEGRITY, QUALITY, LEGALITY, USEFULNESS, SAFETY OR INTELLECTUAL PROPERTY RIGHTS OF OR RELATING TO SUCH PRODUCTS, CONTENT OR MATERIALS. YOU FURTHER UNDERSTAND AND ACKNOWLEDGE THAT YOU MAY BE EXPOSED TO PRODUCTS, CONTENT OR MATERIALS THAT ARE INACCURATE, HARMFUL, DANGEROUS, OFFENSIVE, INDECENT, OR OBJECTIONABLE, AND YOU AGREE TO WAIVE, AND HEREBY DO WAIVE, ANY LEGAL OR EQUITABLE RIGHTS OR REMEDIES YOU HAVE OR MAY HAVE AGAINST COMPANY WITH RESPECT THERETO.
+
+THE COMPANY PRODUCTS / SERVICES, COMPANY CONTENT, THIRD PARTY CONTENT, COURSE DESIGNS, AND ANY PORTIONS OF ANY OF THE FOREGOING, MADE AVAILABLE ON OR THROUGH OR IN RELATION TO THE SITE OR THE SERVICES, ARE PROVIDED ON AN "AS IS," "AS AVAILABLE," "WITH ALL FAULTS" BASIS WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IN TERMS OF CORRECTNESS, SAFETY, ACCURACY, RELIABILITY OR OTHERWISE. TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, COMPANY AND ITS AFFILIATES, PARTNERS, LICENSORS, AND SUPPLIERS HEREBY DISCLAIM ALL EXPRESS, IMPLIED, AND STATUTORY WARRANTIES OF ANY KIND, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM COMPANY, AN EMPLOYEE OR REPRESENTATIVE OF COMPANY, AN INSTRUCTOR / FACULTY, OR THROUGH THE SERVICES WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THESE TERMS. COMPANY AND ITS AFFILIATES, PARTNERS, LICENSORS, AND SUPPLIERS DO NOT WARRANT THAT THE SERVICES OR ANY PART THEREOF, OR ANY PRODUCTS OR CONTENT OFFERED THROUGH THE SERVICES, WILL BE UNINTERRUPTED, OR FREE OF ERRORS, VIRUSES OR OTHER HARMFUL COMPONENTS AND DO NOT WARRANT THAT ANY OF THE FOREGOING WILL BE CORRECTED. YOU UNDERSTAND AND AGREE THAT YOU USE, ACCESS, DOWNLOAD, OR OTHERWISE OBTAIN INFORMATION, MATERIALS, COURSES, OR DATA THROUGH THE COMPANY PRODUCTS, ANY ASSOCIATED SITES OR APPLICATIONS, AND ANY THIRD PARTY SITES AT YOUR OWN DISCRETION AND RISK AND THAT YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE OR DESTRUCTION TO YOUR PROPERTY (INCLUDING YOUR COMPUTER SYSTEM USED IN CONNECTION WITH THE COMPANY PRODUCTS / SERVICES), INJURY TO YOURSELF OR OTHERS, OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD, USE, OR RELIANCE UPON SUCH INFORMATION, MATERIAL, COURSES, OR DATA.
+
+<h4>18. Limitation of Liability</h4>
+UNDER NO CIRCUMSTANCES, INCLUDING, BUT NOT LIMITED TO, WILLFUL NEGLIGENCE, SHALL COMPANY, OR ANY OF ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, SUCCESSORS OR ASSIGNS, OR ANY OTHER CONTRACTORS OR THIRD PARTIES BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, INCLUDING, BUT NOT LIMITED TO, LOSS OF DATA OR PROFIT, ARISING OUT OR RELATING TO THE USE, OR THE INABILITY TO USE, THE COMPANY CONTENT, THE COMPANY PRODUCTS / SERVICES, COURSES, OR ANY PORTION THEREOF, EVEN IF WE OR AN AUTHORIZED REPRESENTATIVE OF COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IF YOUR USE OF THE COMPANY PRODUCTS / SERVICES, COMPANY CONTENT, SERVICES, COURSES, OR ANY PORTION THEREOF RESULTS IN THE NEED FOR SERVICING, REPAIR OR CORRECTION OF ANY EQUIPMENT OR DATA OR MEDICAL ATTENTION TO YOU OR OTHERS, YOU ASSUME ANY AND ALL COSTS THEREOF. IN NO EVENT SHALL COMPANY OR ITS LICENSORS OR INSTRUCTORS OR FACULTIES BE LIABLE IN THE AGGREGATE FOR ANY DAMAGES INCURRED BY YOU THAT EXCEED THE AMOUNT OF FEES THE COMPANY HAS RECEIVED AS A RESULT OF YOUR USE OF COMPANY PRODUCTS / SERVICES TO THE ACTION GIVING RISE TO THE LIABILITY.
+
+NEITHER WE, NOR THIRD PARTIES WARRANT THE ACCURACY OR COMPLETENESS OF THE INFORMATION, TEXT, GRAPHICS, LINKS OR OTHER ITEMS CONTAINED IN THE COMPANY CONTENT, THE COMPANY PRODUCTS / SERVICES, THE COURSES, OR ANY PORTION THEREOF OR IN ANY REPORTS OF VERIFICATION SERVICES. YOU AGREE NOT TO HOLD US (OR OUR AGENTS, EMPLOYEES OR INSTRUCTORS / FACULTIES) LIABLE FOR ANY INSTRUCTION, ADVICE OR SERVICES DELIVERED THAT ORIGINATED THROUGH THE COMPANY PRODUCTS / SERVICES, THROUGH ANY VERIFICATION SERVICE OR IN CONNECTION WITH THE COMPANY CONTENT, OR ANY PORTION THEREOF. WE ARE NOT RESPONSIBLE FOR DISPUTES, CLAIMS, LOSSES, INJURIES, OR DAMAGES OF ANY KIND THAT MIGHT ARISE OUT OF OR RELATE TO CONDUCT OF INSTRUCTORS OR USERS.
+
+<h4>19. Indemnification</h4>
+You agree to indemnify, defend and hold harmless us, and our affiliates, officers, directors, agents, partners, employees, licensors, representatives and third party providers (including our affiliates' respective officers, directors, agents, partners, employees, licensors, representatives, and third party providers), from and against all losses, expenses, damages, costs, claims and demands, including reasonable attorneys' fees and related costs and expenses, due to or arising out of or otherwise transmit to us or through the Site or Services, your use of the Company Products / Services, the Company Content or any portion thereof, your connection to the Site or Services, or your breach of these Terms. We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, and in such case, you agree to fully cooperate with such defense and in asserting any available defenses.
+
+<h4>20. Modification of Services</h4>
+We may add, change or eliminate features, pricing, nomenclature and other aspects of the Company Products / Services and make other changes at any time and these Terms will continue to apply to the Company Products / Services as modified. We reserve the right at any time and from time to time to modify or discontinue, temporarily or permanently, the Company Products / Services (or any part thereof) with or without notice. You agree that we will not be liable to you or to any third party for any such modification, suspension, or discontinuance of all or any portion of the Company Products / Services.
+
+<h4>21. Dispute Resolution</h4>
+(A) You hereby agree that at all times; you will act in good faith, and make all attempts to resolve all differences howsoever arising out of or in connection with this by discussion failing which, by arbitration.
+
+(b) You shall be bound to submit all disputes and differences howsoever arising out of or in connection with this Agreement, to arbitration by three arbitrators: one each nominated by the Parties and the other chosen by the 2 (two) arbitrators so nominated by the Parties. The Parties agree that until the arbitration proceedings are complete, they shall not take their disputes to a court of law. The arbitration shall in all matters be governed by the Arbitration and Conciliation Act, 1996.
+
+(c) The place of arbitration shall be Mumbai. The language to be used in the arbitration proceedings shall be English.
+
+ 
+
+No Class Actions: YOU AND COMPANY AGREE THAT YOU AND COMPANY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. FURTHER, YOU AGREE THAT THE ARBITRATOR MAY NOT CONSOLIDATE PROCEEDINGS OF MORE THAN ONE PERSON'S CLAIMS, AND MAY NOT OTHERWISE PRESIDE OVER ANY FORM OF A REPRESENTATIVE OR CLASS PROCEEDING, AND THAT IF THIS SPECIFIC PROVISO IS FOUND TO BE UNENFORCEABLE, THEN THE ENTIRETY OF THIS MANDATORY ARBITRATION SECTION SHALL BE NULL AND VOID.
+ 
+
+These Terms and your use of the Service shall be governed by the substantive and procedural laws of India without reference to its choice or conflicts of law principles. All disputes arising between you and Company under these Terms shall be subject to the exclusive jurisdiction of the Courts of Mumbai and you and Company hereby submit to the personal jurisdiction and venue of these courts.
+ 
+
+Equitable Relief: The foregoing provisions of this Dispute Resolution section do not apply to any claim in which Company seeks equitable relief of any kind. You acknowledge that, in the event of a breach of these Terms by Company or any third party, the damage or harm, if any, caused to you will not entitle you to seek injunctive or other equitable relief against Company, and your only remedy shall be for monetary damages, subject to the limitations of liability set forth in these Terms.
+ 
+
+Claims: You and Company agree that, notwithstanding any other rights the party may have under law or equity, any cause of action arising out of or related to these Terms or the Services, excluding a claim for indemnification, must commence within three months after the cause of action accrues. Otherwise, such cause of action is permanently barred.
+ 
+
+Improperly Filed Claims: All claims you bring against Company must be resolved in accordance with this Dispute Resolution section. All claims filed or brought contrary to this Dispute Resolution section shall be considered improperly filed. Should you file a claim contrary to this Dispute Resolution section, Company may recover attorneys' fees and costs up to Rs 10,00,000, provided that Company has notified you in writing of the improperly filed claim, and you have failed to promptly withdraw the claim.
+<h4>22. Termination of Services; Termination of Agreement</h4>
+We may terminate your use of the Company Products / Services immediately without notice for any breach by you of these Terms or any of our applicable policies, as posted on the Site from time to time. Furthermore, we may terminate your rights to use the Company Products / Services for any reason or no reason.
+
+In the event of termination or expiration of these Terms, the following sections of these Terms shall survive: all provisions regarding ownership of intellectual property, disclaimer; warranty disclaimer, limitation of liability, dispute resolution, any other provisions of these Terms which, by their nature, apply after termination, and the miscellaneous provisions below. You agree that upon the termination, we may delete all information related to you on the Services and may bar your access to and use of the Company Products / Services. Upon the termination you will immediately destroy any downloaded or printed Company Content.
+
+You are free to terminate your use of the Company Products / Services at any time. You can simply choose to stop visiting or using any aspect of the Company Products / Services. If you wish to terminate your account on the Site or with the Services, you may do so by contacting us via training@bseindia.com or using any other account termination functionality that may be offered through the Company Products / Services.
+
+<h4>23. Miscellaneous</h4>
+ 
+
+Entire Agreement: These Terms and any policies applicable to you posted on the Site constitute the entire agreement between the parties with respect to the subject matter hereof, and supersede all previous written or oral agreements between the parties with respect to such subject matter. All rights not expressly granted in the Terms are expressly reserved. These Terms shall inure to our benefit and to the benefit of our agents, licensors, licensees, successors, and assigns.
+Severability: If any provision of these Terms is found to be illegal, void or unenforceable, then that provision shall be deemed severable from these Terms and shall not affect the validity and enforceability of any remaining provisions of these Terms.
+Waiver: A provision of these Terms may be waived only by a written instrument executed by the party entitled to the benefit of such provision. The failure of Company to exercise or enforce any right or provision of these Terms will not constitute a waiver of such right or provision.
+Notice: Any notice or other communication to be given hereunder will be in writing and given by facsimile, postpaid registered or certified mail return receipt requested, or electronic mail.
+No Agency: Nothing in these Terms shall be construed as making either party the partner, joint venture, agent, legal representative, employer, contractor or employee of the other. Neither the Company nor any other party to this Agreement shall have, or hold itself out to any third party as having, any authority to make any statements, representations or commitments of any kind, or to take any action that shall be binding on the other except as provided for herein or authorized in writing by the party to be bound.
+Headings: The heading references herein are for convenience purposes only, do not constitute a part of these Terms, and shall not be deemed to limit or affect any of the provisions hereof.
+Disclosures: The Company Products / Services are offered by BSE Institute Limited, located at 19th Floor, P. J. Towers, Dalal Street, Mumbai - 400001. You may contact us by sending correspondence to the foregoing address or by e-mailing us at training@bseindia.com.
+        </p>
+        <input type="checkbox" id="tandc"> I agree to the terms and conditions<br><br>
+        <button id="acceptBtn" >Accept</button>
+    </div>
+</div>
+
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+<script src="/static/assets/js/bootstrap_5_3.js"></script>
+<script src="/static/assets/js/popper_min.js"></script>
+<script src="/static/assets/js/bootstrap_5_3_min.js"></script>
+</body>
+
+ <!--Bootstrap-->
+ <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+ <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+ 
+</html>

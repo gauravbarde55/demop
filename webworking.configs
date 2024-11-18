@@ -1,0 +1,31 @@
+<configuration>
+    <system.webServer>
+        <fastCgi>
+            <application processPath="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\venv\Scripts\python.exe">
+                <environment>
+                    <WSGI_HANDLER>app:app</WSGI_HANDLER>
+                </environment>
+            </application>
+        </fastCgi>
+        <rewrite>
+            <rules>
+                <rule name="ReverseProxyInboundRule1" stopProcessing="true">
+                    <match url=".*" />
+                    <action type="Rewrite" url="app.wsgi" />
+                </rule>
+            </rules>
+        </rewrite>
+        <httpErrors errorMode="Detailed" />
+        <asp scriptErrorSentToBrowser="true" />
+        <handlers>
+            
+            <remove name="Python FastCGI" />
+            <add name="Python FastCGI" path="*" verb="*" modules="FastCgiModule" scriptProcessor="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\venv\Scripts\python.exe|E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\wfastcgi.py" resourceType="Either" requireAccess="Script" />
+            
+        </handlers>
+    </system.webServer>
+    <appSettings>
+        <add key="WSGI_HANDLER" value="app.app" />
+        <add key="PYTHONPATH" value="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop" />
+    </appSettings>
+</configuration>

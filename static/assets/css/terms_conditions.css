@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.popupt {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.popupt-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centered vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Width of the pop-up */
+    max-height: 70%; /* Limit height to prevent overflow */
+    overflow: auto; /* Hide overflow for the main box */
+}
+.close {
+
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

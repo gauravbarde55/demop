@@ -1,0 +1,337 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <!-- meta tag -->
+     <meta charset="utf-8">
+     <!-- <title>Register</title> -->
+     <meta name="description" content="">
+     <!-- responsive tag -->
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Enquiry Form JS and CSS Start-->
+     <script src="/static/assets/js/register_form.js"></script>
+     <link rel="stylesheet" type="text/css" href="../static/assets/css/register_form.css">
+     <!-- Enquiry Form JS and CSS End-->
+     <!-- favicon -->
+     <link rel="apple-touch-icon" href="apple-touch-icon.html">
+     <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/fav.png">
+     <!-- Bootstrap v4.4.1 css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+     <!-- font-awesome css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.min.css">
+     <!-- animate css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/animate.css">
+     <!-- off canvas css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/off-canvas.css">
+     <!-- linea-font css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/fonts/linea-fonts.css">
+     <!-- flaticon css  -->
+     <link rel="stylesheet" type="text/css" href="static/assets/fonts/flaticon.css">
+     <!-- Main Menu css -->
+     <link rel="stylesheet" href="static/assets/css/rsmenu-main.css">
+     <!-- spacing css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/rs-spacing.css">
+     <!-- style css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+     <!-- responsive css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/responsive.css">
+
+    <title>Register</title>
+    <style>
+        .dropbtn {
+          /* background-color: #04AA6D; */
+          color: white;
+          /* padding: 16px; */
+          /* font-size: 16px; */
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 120px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        /* .dropdown-content a:hover {background-color: #ddd;} */
+        
+        .dropdown:hover .dropdown-content {display: block;}
+/*         
+        .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+        .himg{
+            visibility:'hidden';
+        }
+        
+                </style>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errors = [];
+
+            if (username.length < 3 || username.length > 15) {
+                errors.push("Username must be between 3 and 15 characters long.");
+            }
+            // if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+            //     errors.push("Username can only contain letters, numbers, and underscores.");
+            // }
+            if (password.length < 6) {
+                errors.push("Password must be at least 6 characters long.");
+            }
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false;  // Prevent form submission
+            }
+            return true;  // Allow form submission
+        }
+
+        function displayFullName() {
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+            document.getElementById('username').value = firstName + '.' + lastName;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Main content Start -->
+    <div class="main-content">
+        <!--Full width header Start-->
+       
+        <!--Full width header End-->
+
+        <!-- Main content Start -->
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <div class="breadcrumbs-img">
+                    <img src="static/assets/images/breadcrumbs/graduate.png" alt="Breadcrumbs Image">
+                </div>
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">Register</h1>
+                    <!--
+                    <ul>
+                        <li>
+                            <a class="active" href="index-2.html">Home</a>
+                        </li>
+                        <li>Course</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Popular Courses Section Start -->
+            <div class="rs-cart orange-color pt-100 pb-100 md-pt-120 md-pb-70">
+                <div class="container">
+                    <div class="cart-wrap">
+
+
+
+
+                        <h1 style="text-align: center;">Register</h1>
+                        <form action="{{ url_for('register') }}" method="POST" onsubmit="return validateForm()" style="text-align: center;">
+                            {% if errors %}
+                            <ul>
+                                {% for error in errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                                {% endif %}
+                            <!-- <div class="row col-md-6"> -->
+                                <!-- <div class="col-md-6"> -->
+                            <!-- <label for="username">Username:</label> -->
+                            <!-- </div> -->
+                            <div class="form-group col-md-12">
+
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="first_name" style="float: right;font-size: large;">First Name:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="first_name" name="first_name" class="form-control"  oninput="displayFullName()" required>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="middle_name" style="float: right;font-size: large;">Middle Name:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="middle_name" name="middle_name" class="form-control"  oninput="displayFullName()" required>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="last_name" style="float: right;font-size: large;">Last Name:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="last_name" name="last_name" class="form-control"  oninput="displayFullName()" required>
+                                        <input type="text" id="username" name="username" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="email_id" style="float: right;font-size: large;">Email:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="email" id="email_id" name="email_id" class="form-control" required>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <label for="mobile" class="form-label">Email address</label> -->
+                                    <div class="col-md-4">
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Contact Number" required> -->
+                                        <label for="mobile" style="float: right;font-size: large;">Contact Number:</label>
+                                        <!-- <input type="tel" class="form-control form-control-sm" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required> -->
+                                        
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" placeholder="Contact Number" onkeypress="enableOTPbtn()" required> -->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Contact Number" required> -->
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required>
+                                        <!-- <input type="tel" class="form-control form-control-sm" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required> -->
+                                        
+                                        <!-- <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" placeholder="Contact Number" onkeypress="enableOTPbtn()" required> -->
+                                    </div>
+                                    <div class="row form-group col-md-4 mb-3">
+                                    <!-- <div class="col-md-6">
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" placeholder="Contact Number" oninput="enableOTPbtn()" onkeyup="enableOTPbtn()" style="margin-right: 0px;" required>
+                                    </div> -->
+                                    <div class="col-md-3">
+                                        <input type="hidden" class="form-control form-control-sm" id="num_verify" name="num_verify" placeholder="Number Verify" aria-label="Number Verify" required>
+                
+                                        <img src="/static/assets/images/verify_logo.png" class="form-control himg" id="rf_verify_image" name="rf_verify_image" style="height: 32px;width: 44px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <button type="button" id="otpbtn" name="otpbtn" class="disabled btn btn-warning" onclick="sendOtp()" style="height: 32px;font-size: small; float: left;" disabled="">Send OTP</button>
+                                    </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                                <div class="row form-group col-md-12 mb-3">
+                                    <!-- <div class="col-md-2"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="username" style="float: right;font-size: large;">Password:</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="password" id="password" name="password" class="form-control" required>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-8">
+                            <input type="text" id="username" name="username" class="form-control" style="margin:0 auto; text-align: center;" required>
+                            <input type="text" id="username" name="username" class="form-control col-md-4" style="margin:0 auto; text-align: center;" required>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control col-xs-4" required>
+                            <br>
+                            </div> -->
+                            <button type="submit" class="btn btn-warning">Register</button>
+                            <!-- </div> -->
+                            <script>
+                                // Disable OTP Button If Number is Less than 10 Digit
+                            
+                                    // let up = document.getElementById('GFG_UP');
+                                    // let down = document.getElementById('GFG_DOWN');
+                                    let el = document.getElementById('mobile');
+                                    // up.innerHTML = 
+                                    //       "Type in the input box to determine the pressed.";
+                                    el.addEventListener('keydown', function (event) {
+                                        const key = event.key;
+                                        if (key === "Backspace" || key === "Delete") {
+                                            disableOTPButton();
+                                            // alert('B Pressed');
+                                            // $('#GFG_DOWN').html(key + ' is Pressed!');
+                                        }
+                                    }); 
+                                            
+                                    // Disable Submit Button By Default
+                            
+                                    // Get a reference to the button element
+                                    const sbutton = document.getElementById("submitBtn");
+                                    // Disable the button
+                                    sbutton.disabled = true;
+                        
+                                    ////////////////////////////////////////
+                        
+                                    ////// Display Verified Image Logo
+                                    function hideImage() {
+                                        var img = document.getElementById('rf_verify_image');
+                                        img.style.visibility = 'hidden';
+                                    }
+                                    hideImage()
+                        
+                        
+                                    //////////////////////////////////////////////////////
+                            </script>
+                        
+                            </form>
+                            
+                             <!-- OTP Popup -->
+                             <div id="otpPopup" class="popup hidden">
+                                <div class="popup-content">
+                                    
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="float: right;" onclick="cancelOtpPopup()"></button>
+                                    <h3>Verify Mobile Number</h3>
+                                    <label style="font-size: 14px;">OTP has been sent to you on your mobile number, please enter it below.</label>
+                                    <div id="otpMessage" class="message"></div>
+                                    <div>
+                                        <input type="text" id="otp1" class="otp-field" maxlength="1" oninput="moveFocus(event, 'otp2')" />
+                                        <input type="text" id="otp2" class="otp-field" maxlength="1" oninput="moveFocus(event, 'otp3')" />
+                                        <input type="text" id="otp3" class="otp-field" maxlength="1" oninput="moveFocus(event, 'otp4')" />
+                                        <input type="text" id="otp4" class="otp-field" maxlength="1" />
+                                    </div>
+                                    
+                                    
+                        
+                                    <div>
+                                        <button class="btn btn-primary mt-3" id="verify_otp_btn" name="verify_otp_btn" onclick="verifyOtp()" style="font-size: small;">Verify OTP</button>
+                                        <a onclick="resendOtp()" href="javascript:void(0);" class="acenter mt-3">Resend OTP</a>
+                                        <!-- <button class="btn btn-primary" onclick="verifyOtp()" style="font-size: small;">Verify OTP</button> -->
+                                    </div>
+                                    
+                        
+                                    <!-- <button type="button" class="btn btn-warning" onclick="resendOtp()" style="font-size: small;">Resend OTP</button> -->
+                        
+                                    <!-- <button class="btn btn-danger" onclick="document.getElementById('otpPopup').style.display = 'none';" style="font-size: small;">Cancel</button> -->
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- <form action="https://securegw-stage.paytm.in/theia/processTransaction" method="post"> -->
+<form action="{{PAYTM_BASE_URL}}" method="post">
+    <!-- <input type="hidden" name="MID" value="YOUR_MERCHANT_ID"> -->
+    <input type="hidden" name="MID" value="BSEIns00118007523920">
+    <!-- <input type="hidden" name="ORDER_ID" value="ORDER123456"> -->
+    <input type="text" name="ORDER_ID" value="{{params['orderId']}}">
+    <!-- <input type="hidden" name="TXN_AMOUNT" value="100.00"> -->
+    <input type="hidden" name="TXN_AMOUNT" value="{{params['CHECKSUMHASH']}}">
+    <input type="hidden" name="CUST_ID" value="CUSTOMER001">
+    <input type="hidden" name="CHANNEL_ID" value="WEB">
+    <input type="hidden" name="WEBSITE" value="WEBSTAGING">
+    <input type="hidden" name="INDUSTRY_TYPE_ID" value="Retail">
+    <input type="hidden" name="CALLBACK_URL" value="http://localhost:5000/callback">
+    <!-- <input type="hidden" name="CHECKSUMHASH" value="GENERATED_CHECKSUM"> -->
+    <input type="hidden" name="CHECKSUMHASH" value="{{params['CHECKSUMHASH']}}">
+    <input type="hidden" name="para" value="{{params}}">
+    <button type="submit">Pay Now2</button>
+    {{params}}
+</form>

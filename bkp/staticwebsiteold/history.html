@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head> 
+        <!-- meta tag -->
+        <meta charset="utf-8">
+        <title>History</title>
+        <meta name="description" content="">
+        <!-- responsive tag -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.html">
+        <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
+        <!-- Bootstrap v4.4.1 css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+        <!-- font-awesome css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+        <!-- off canvas css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/off-canvas.css">
+        <!-- linea-font css -->
+        <link rel="stylesheet" type="text/css" href="assets/fonts/linea-fonts.css">
+        <!-- flaticon css  -->
+        <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css">
+        <!-- magnific popup css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+        <!-- Main Menu css -->
+        <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+        <!-- spacing css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/rs-spacing.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- This stylesheet dynamically changed from style.less -->
+        <!-- responsive css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+           
+
+/******************* Timeline Demo - 4 *****************/
+.main-timeline4 {
+    overflow: hidden;
+    position: relative
+}
+
+.main-timeline4:before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.main-timeline4 .timeline-content:before,
+.main-timeline4 .timeline:before {
+    top: 50%;
+    transform: translateY(-50%);
+    content: ""
+}
+
+.main-timeline4 .timeline {
+    width: 50%;
+    padding-left: 100px;
+    float: right;
+    position: relative
+}
+
+.main-timeline4 .timeline:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 5px solid #333;
+    position: absolute;
+    left: -10px
+}
+
+.main-timeline4 .timeline-content {
+    display: block;
+    padding-left: 150px;
+    position: relative
+}
+
+.main-timeline4 .timeline-content:before {
+    width: 90px;
+    height: 10px;
+    border-top: 7px dotted #333;
+    position: absolute;
+    left: -92px
+}
+
+.main-timeline4 .year {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    line-height: 100px;
+    border-radius: 50%;
+    border: 10px solid #f54957;
+    font-size: 30px;
+    color: #f54957;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.main-timeline4 .year:before {
+    content: "";
+    border-left: 20px solid #f54957;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    bottom: -13px;
+    right: 0;
+    transform: rotate(45deg)
+}
+
+.main-timeline4 .inner-content {
+    padding: 20px 0
+}
+
+.main-timeline4 .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f54957;
+    text-transform: uppercase;
+    margin: 0 0 5px
+}
+
+.main-timeline4 .description {
+    font-size: 14px;
+    color: #6f6f6f;
+    margin: 0 0 5px
+}
+
+.main-timeline4 .timeline:nth-child(2n) {
+    padding: 0 100px 0 0
+}
+
+.main-timeline4 .timeline:nth-child(2n) .timeline-content:before,
+.main-timeline4 .timeline:nth-child(2n) .year,
+.main-timeline4 .timeline:nth-child(2n):before {
+    left: auto;
+    right: -10px
+}
+
+.main-timeline4 .timeline:nth-child(2n) .timeline-content {
+    padding: 0 150px 0 0
+}
+
+.main-timeline4 .timeline:nth-child(2n) .timeline-content:before {
+    right: -92px
+}
+
+.main-timeline4 .timeline:nth-child(2n) .year {
+    right: 0
+}
+
+.main-timeline4 .timeline:nth-child(2n) .year:before {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 20px solid #f54957;
+    transform: rotate(-45deg)
+}
+
+.main-timeline4 .timeline:nth-child(2) {
+    margin-top: 110px
+}
+
+.main-timeline4 .timeline:nth-child(odd) {
+    margin: -110px 0 0
+}
+
+.main-timeline4 .timeline:nth-child(even) {
+    margin-bottom: 80px
+}
+
+.main-timeline4 .timeline:first-child,
+.main-timeline4 .timeline:last-child:nth-child(even) {
+    margin: 0
+}
+
+.main-timeline4 .timeline:nth-child(2n) .year {
+    border-color: #1ebad0;
+    color: #1ebad0
+}
+
+.main-timeline4 .timeline:nth-child(2) .year:before {
+    border-right-color: #1ebad0
+}
+
+.main-timeline4 .timeline:nth-child(2n) .title {
+    color: #1ebad0
+}
+
+.main-timeline4 .timeline:nth-child(3n) .year {
+    border-color: #7cba01;
+    color: #7cba01
+}
+
+.main-timeline4 .timeline:nth-child(3) .year:before {
+    border-left-color: #7cba01
+}
+
+.main-timeline4 .timeline:nth-child(3n) .title {
+    color: #7cba01
+}
+
+.main-timeline4 .timeline:nth-child(4n) .year {
+    border-color: #f8781f;
+    color: #f8781f
+}
+
+.main-timeline4 .timeline:nth-child(4) .year:before {
+    border-right-color: #f8781f
+}
+
+.main-timeline4 .timeline:nth-child(4n) .title {
+    color: #f8781f
+}
+
+@media only screen and (max-width:1200px) {
+    .main-timeline4 .year {
+        top: 50%;
+        transform: translateY(-50%)
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .main-timeline4 .timeline {
+        padding-left: 75px
+    }
+
+    .main-timeline4 .timeline:nth-child(2n) {
+        padding: 0 75px 0 0
+    }
+
+    .main-timeline4 .timeline-content {
+        padding-left: 130px
+    }
+
+    .main-timeline4 .timeline:nth-child(2n) .timeline-content {
+        padding: 0 130px 0 0
+    }
+
+    .main-timeline4 .timeline-content:before {
+        width: 68px;
+        left: -68px
+    }
+
+    .main-timeline4 .timeline:nth-child(2n) .timeline-content:before {
+        right: -68px
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .main-timeline4 {
+        overflow: visible
+    }
+
+    .main-timeline4:before {
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(0)
+    }
+
+    .main-timeline4 .timeline:before,
+    .main-timeline4 .timeline:nth-child(2n):before {
+        top: 60px;
+        left: -9px;
+        transform: translateX(0)
+    }
+
+    .main-timeline4 .timeline,
+    .main-timeline4 .timeline:nth-child(even),
+    .main-timeline4 .timeline:nth-child(odd) {
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 10px
+    }
+
+    .main-timeline4 .timeline-content,
+    .main-timeline4 .timeline:nth-child(2n) .timeline-content {
+        padding: 0
+    }
+
+    .main-timeline4 .timeline-content:before,
+    .main-timeline4 .timeline:nth-child(2n) .timeline-content:before {
+        display: none
+    }
+
+    .main-timeline4 .timeline:nth-child(2n) .year,
+    .main-timeline4 .year {
+        position: relative;
+        transform: translateY(0)
+    }
+
+    .main-timeline4 .timeline:nth-child(2n) .year:before,
+    .main-timeline4 .year:before {
+        border: none;
+        border-right: 20px solid #f54957;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        top: 50%;
+        left: -23px;
+        bottom: auto;
+        right: auto;
+        transform: rotate(0)
+    }
+
+    .main-timeline4 .timeline:nth-child(2n) .year:before {
+        border-right-color: #1ebad0
+    }
+
+    .main-timeline4 .timeline:nth-child(3n) .year:before {
+        border-right-color: #7cba01
+    }
+
+    .main-timeline4 .timeline:nth-child(4n) .year:before {
+        border-right-color: #f8781f
+    }
+
+    .main-timeline4 .inner-content {
+        padding: 10px
+    }
+}
+
+
+        </style>
+    </head>
+    <body class="defult-home">
+
+
+        <!--Full width header Start-->
+        <div class="full-width-header home8-style4 main-home">
+            <!--Header Start-->
+            <header id="rs-header" class="rs-header">
+                <!-- Menu Start -->
+                <div class="menu-area menu-sticky">
+                    <div class="container">
+                        <div class="row y-middle">
+                            <div class="col-lg-2">
+                                <div class="logo-cat-wrap">
+                                    <div class="logo-part">
+                                        <a href="index.html">
+                                            <img class="normal-logo" src="images/logo-light.png" alt="">
+                                            <img class="sticky-logo" src="images/dark-logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 text-right">
+                              <div class="rs-menu-area">
+                                  <div class="main-menu">
+                                      <div class="mobile-menu">
+                                          <a class="rs-menu-toggle">
+                                              <i class="fa fa-bars"></i>
+                                          </a>
+                                      </div>
+                                      <div id="header"></div>                                       
+                                  </div> <!-- //.main-menu -->
+                                
+                              </div>
+                            </div>
+                            <div class="col-lg-2 text-right">
+                                <div class="expand-btn-inner">
+                                    <ul>
+                                      
+                                        <li>
+                                            <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
+                                                <i class="flaticon-search"></i>
+                                            </a>
+                                        </li>
+                                    
+                                        <li class="user-icon last-icon">
+                                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                        </li>
+
+                                        
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu End --> 
+
+            </header>
+            <!--Header End-->
+        </div>
+        <!--Full width header End-->
+
+		<!-- Main content Start -->
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <div class="breadcrumbs-img">
+                    <img src="assets/images/breadcrumbs/2.jpg" alt="Breadcrumbs Image">
+                </div>
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">HISTORY</h1>
+                  
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->   
+            
+            
+
+
+              
+
+            <!-- Intro Courses -->
+            <div id="rs-about" class="rs-about style3 pt-100 pb-100 md-pt-70">
+                <div class="container">
+                    <div class="row y-middle">
+                        <div class="col-lg-12 lg-pr-0 md-mb-30">
+                            <div class="about-intro">
+                                <div class="sec-title">
+                                    <div class="sub-title orange"></div>
+                                    <h2 class="title mb-21">History</h2>
+                                    <div class="desc big">The BSE Institute Ltd. is a 100% subsidiary of BSE Limited. BSE Institute Ltd. inherits the knowledge and insights into the capital markets industry garnered over the past 148 years by BSE. Our course design and development is firmly grounded in knowledge of business processes—in entrepreneurial companies and established firms unconstrained by the boundaries of academic disciplines.</div>
+
+
+                                    <div class="desc big">For more than two decades, the BSE Institute Ltd. faculty have drawn on their passion for teaching, their experience in working with organizations worldwide, and the insights gained from their experience to educate professionals who have shaped the practice of business in financial markets not only in India but also in many other countries around the world.  </div>
+                                </div>
+                            </div>
+
+<!---timeline---->
+<div class="main-timeline4">
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2020</span>
+            <div class="inner-content">
+                <h3 class="title">Unique skill program completed to help students transit from school to workplace successfully</h3>
+                <p class="description">BSE Institute successfully trained school children under the ‘school to workplace’ transition project.</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2020</span>
+            <div class="inner-content">
+                <h3 class="title">First Bachelors in Capital Markets Batch graduated</h3>
+                <p class="description">
+                    BSE Institute launched the first Bachelors in Capital Markets batch—a first of its kind undergraduate program focused in Capital Markets.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2020</span>
+            <div class="inner-content">
+                <h3 class="title">Skill Development Initiatives Launched in J&K</h3>
+                <p class="description">
+                    Conducted specialized skill enhancement programs for the youths and students of Jammu and Kashmir.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2019</span>
+            <div class="inner-content">
+                <h3 class="title">Country’s Largest One-Time Skill Development Program for the Investment Banking Industry Completed</h3>
+                <p class="description">
+                    Created a supply chain of trained young graduates for the high tech Investment Banking Industry.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2019</span>
+            <div class="inner-content">
+                <h3 class="title">Integrated Financial Services Entrepreneurship Program Launched</h3>
+                <p class="description">Launched GST training programs with a mission to groom skilled youths and empower them to become self-reliant.</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2018</span>
+            <div class="inner-content">
+                <h3 class="title">Won the IPN Employability Award for Asia Pacific</h3>
+                <p class="description">
+                    BSE Institute Ltd. won the prestigious IPN Global Best Award for Youth Employability at the NASA centre in Houston, Texas for its pioneering work in this field.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2018</span>
+            <div class="inner-content">
+                <h3 class="title">Unique Start-up Incubator set up at IMS, BHU</h3>
+                <p class="description">Set up an start up Incubator at BHU in collaboration with Niti Aayog. This incubator was inaugurated and dedicated to the nation by Hon. Prime Minister Shri Narendra Modi.</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2018</span>
+            <div class="inner-content">
+                <h3 class="title">Demonstrated Stock Trading as a Financial Skill Trade in the World Skills Championship</h3>
+                <p class="description">
+                    BSE Institute was the only professional institute from India to be invited to participate in and demonstrate stock trading as a skill at the World Skill Championship held at Abu Dhabi.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2017</span>
+            <div class="inner-content">
+                <h3 class="title">First Bachelors in Capital Markets Program Launched in the Country</h3>
+                <p class="description">
+                    Launched the first undergraduate degree program focussed on Capital Markets. Students on completion embark on a rewarding career in various organizations like banks, Stock Exchanges, broking houses, financial service companies, microfinance organizations, PE fund houses, and NBFC's etc.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2017</span>
+            <div class="inner-content">
+                <h3 class="title">Launched Dalal Street Lit Fest—a Unique Lit Fest Focussed on Books, Stories & Entertainment</h3>
+                <p class="description">
+                    Dalal Street Lit fest is the first of its kind and only literature festival to be hosted in a stock exchange. This lit fest is an exchange of words, thoughts, and expressions that amalgamate the two diverse worlds.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2016</span>
+            <div class="inner-content">
+                <h3 class="title">Graduation of the First Batch of Global Financial Markets Program</h3>
+                <p class="description">The country's only undergraduate concurrent vocational course that prepares students to become employable from day one on completion graduation.</p>
+
+                    <p class="description">We launched India's first online platform focused on capital markets—bsevarsity.com—which offers the widest variety of courses.</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2015</span>
+            <div class="inner-content">
+                <h3 class="title">bsevarsity.com – India's First Edtech Platform Focused on Capital Markets Launched</h3>
+                <p class="description">
+                    India's first edtech , focused on capital markets—bsevarsity.com—offers the widest variety of courses. Byte sized courses, learn what you want to , allows you to learn as you go.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2015</span>
+            <div class="inner-content">
+                <h3 class="title">World's first start up accelerator housed within a stock exchange set up</h3>
+                <p class="description">World's first start-up accelerator housed in a stock exchange—a unique cross-border start-up accelerator set up with Ryerson University Toronto and Simon Fraser University, Vancouver Canada and India. Incubated close to 400 start-ups till date</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2013</span>
+            <div class="inner-content">
+                <h3 class="title">Launched Training Programs on BFSI Skills to ensure employability for young Youths , Women in the multiple states </h3>
+                <p class="description">
+                    BSE Institute began conducting various skill-building programs in association with the Govt. of Kerala, covering 13 districts across the state linked with internships.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2013</span>
+            <div class="inner-content">
+                <h3 class="title">Graduation of the First Batch of MBA Students</h3>
+                <p class="description">
+                    The country's only level Master's program focussed on Financial Markets.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2012</span>
+            <div class="inner-content">
+                <h3 class="title">Launched the First National Level Stock Trading Competition—Stock Torero</h3>
+                <p class="description">
+                    The first national stock trading competition was conducted using real stock market software and environment, thereby simulating the market environment for college students.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2012</span>
+            <div class="inner-content">
+                <h3 class="title">BSE Institute Expands its Horizons</h3>
+                <p class="description">Over the years, BSE Institute became one of the most sought-after educational institutes in the area of financial learning. In order to provide financial knowledge to students across India, we opened multiple centres all over the country.</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2012</span>
+            <div class="inner-content">
+                <h3 class="title">First Banking and Finance Program Launched</h3>
+                <p class="description">
+                    Launched a post-graduate program in Banking and Finance. This program aims to equip individuals to commence a career in Banking Industry
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2011</span>
+            <div class="inner-content">
+                <h3 class="title">BFSI Sector Skill Council of India set up as a nodal body to implement all National Skills program under NSDC </h3>
+                <p class="description">The BFSI Sector Skill Council of India, under NSDC (National Skill Development Corporation), was established as a not for profit. A nodal body across BFSI Industry and Government of India, it is responsible for implementing all the National Skills Program.</p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2011</span>
+            <div class="inner-content">
+                <h3 class="title">Vocational Programs Launched</h3>
+                <p class="description">
+                    BSE Institute launched its first undergraduate, concurrent vocational program—GFMP. The Global Financial Markets Professional Program is meant for aspiring undergraduate students. Unique to the industry, it delivers first-hour, first-day job-ready financial markets skilled resources.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2011</span>
+            <div class="inner-content">
+                <h3 class="title">World's first MBA in Capital Markets Introduced</h3>
+                <p class="description">
+                    BSE Institute launched the world's first MBA focused in Capital Markets.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">2010</span>
+            <div class="inner-content">
+                <h3 class="title">BSE Institute Becomes a Fully Owned Subsidiary of BSE</h3>
+                <p class="description">
+                    Set up as a fully owned 100% subsidiary of the Bombay Stock Exchange Ltd. BSE Institute continues to inherit the knowledge from BSE Ltd., which has been garnered over the past many years.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="timeline">
+        <a href="#" class="timeline-content">
+            <span class="year">1989</span>
+            <div class="inner-content">
+                <h3 class="title">BSE Training Institute Established</h3>
+                <p class="description">BSE Training Institute Ltd. was established as a department of BSE Ltd in the year of 1989 as a Center of excellence for Financial Literacy. Inaugurated by the then the Finance Minister of India, it was a first of its kind institution across South - East Asia, focused to training brokers, government officials, Regulators, students amongst others.</p>
+            </div>
+        </a>
+    </div>
+   
+ 
+  
+
+    
+
+
+</div>
+<!---end timeline-->
+
+                        </div>
+
+
+
+
+
+                
+                        
+                    </div>
+
+               
+                </div>
+            </div>
+            <!-- End intro Courses -->
+
+
+
+
+          
+
+
+          
+
+        </div> 
+        <!-- Main content End --> 
+
+        
+        <div id="footer"></div>
+
+        <!-- start scrollUp  -->
+        <div id="scrollUp" class="orange-color">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- End scrollUp  -->
+
+        <!-- Search Modal Start -->
+        <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="flaticon-cross"></span>
+            </button>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="search-block clearfix">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Search Here..." type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Modal End -->
+
+        <!-- modernizr js -->
+        <script src="assets/js/modernizr-2.8.3.min.js"></script>
+        <!-- jquery latest version -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- Bootstrap v4.4.1 js -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- magnific popup js -->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!-- Menu js -->
+        <script src="assets/js/rsmenu-main.js"></script> 
+        <!-- wow js -->
+        <script src="assets/js/wow.min.js"></script>     
+        <!-- plugins js -->
+        <script src="assets/js/plugins.js"></script>
+        <!-- contact form js -->
+        <script src="assets/js/contact.form.js"></script>
+        <!-- main js -->
+        <script src="assets/js/main.js"></script>
+    </body>
+
+
+</html>

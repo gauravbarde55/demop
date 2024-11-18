@@ -1,0 +1,133 @@
+<style>
+    .dropbtn {
+      /* background-color: #04AA6D; */
+      color: white;
+      /* padding: 16px; */
+      /* font-size: 16px; */
+      border: none;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* .dropdown-content a:hover {background-color: #ddd;} */
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+            </style>
+
+<!--Full width header Start-->
+<div class="full-width-header home8-style4 main-home">
+    <!--Header Start-->
+    <header id="rs-header" class="rs-header">
+        <!-- Menu Start -->
+        <div class="menu-area menu-sticky">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-2">
+                        <div class="logo-cat-wrap">
+                            <div class="logo-part">
+                                <a href="{{ url_for('index') }}">
+                                    <img class="normal-logo" src="static/assets/images/logo-light.png" alt="">
+                                    <!-- <img class="sticky-logo" src="images/dark-logo.png" alt=""> -->
+                                    <img class="sticky-logo" src="/static/assets/images/dark-logo-n.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 text-right">
+                      <div class="rs-menu-area">
+                          <div class="main-menu">
+                              <div class="mobile-menu">
+                                  <a class="rs-menu-toggle">
+                                      <i class="fa fa-bars"></i>
+                                  </a>
+                              </div>
+                              <div id="header"></div>                                      
+                          </div> <!-- //.main-menu -->
+                        
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-right">
+                        <div class="expand-btn-inner">
+                            <ul>
+                              
+                                <li>
+                                    <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
+                                        <i class="flaticon-search"></i>
+                                    </a>
+                                </li>
+                            
+                                <li class="user-icon last-icon dropdown">
+                                    <a><i class="fa fa-user dropbtn" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i> <span style="color: ghostwhite;"> &nbsp;{% if session.get('username') %}{{ session.get('username') }}!{% endif %}</span></a>
+                                    <div class="dropdown-content">
+                                        {% if session.get('username') %}
+                                        <!-- <p>Hello, {{ session.get('username') }}!</p> -->
+                                        <a href="{{ url_for('my_courses') }}">My Courses</a>
+                                        <a href="{{ url_for('logout') }}">Logout</a>
+                                    {% else %}
+                                        <a href="{{ url_for('login') }}">Login</a>
+                                        <a href="{{ url_for('register') }}">Register</a>
+                                    {% endif %}
+                                        
+                                      </div>
+                                    <!-- <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul> -->
+                                      <!-- <div class="dropdown">
+                                        <button class="dropbtn">Dropdown</button>
+                                        <div class="dropdown-content">
+                                          <a href="#">Link 1</a>
+                                          <a href="#">Link 2</a>
+                                          <a href="#">Link 3</a>
+                                        </div>
+                                      </div> -->
+                                </li>
+
+                               
+                                
+                            </ul>
+                        
+                        </div>
+                        
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                              <li><button class="dropdown-item" type="button">Action</button></li>
+                              <li><button class="dropdown-item" type="button">Another action</button></li>
+                              <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            </ul>
+                          </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End --> 
+
+    </header>
+    <!--Header End-->
+</div>
+<!--Full width header End-->

@@ -1,0 +1,54 @@
+<nav class="rs-menu">
+    <ul class="nav-menu">
+        <li class="menu-item-has-children current-menu-item">
+            <a href="#">Study</a>
+            <ul class="sub-menu">
+               <!-- <li class=""><a href="graduate.html">Graduate</a></li>
+               <li><a href="post-graduate.html">Post Graduate</a></li>
+               <li><a href="professional-studies.html">Professional Studies</a></li>
+               <li><a href="vocational.html">Vocational </a></li> -->
+               <li class=""><a href="{{ url_for('graduate_courses') }}">Graduate</a></li>
+               <li><a href="{{ url_for('post_graduate_courses') }}">Post Graduate</a></li>
+               <li><a href="{{ url_for('professional_studies') }}">Professional Studies</a></li>
+               <li><a href="{{ url_for('vocational_courses') }}">Vocational </a></li>
+               
+            </ul>
+        </li>
+
+        <li class="menu-item-has-children">
+            <a href="#">Certification</a>
+            <ul class="sub-menu">
+               <li class=""><a href="checkmyskills.html">Checkmyskills</a></li>
+               <li class=""> <a href="regulatory-exams.html">Regulatory exams</a></li>
+            </ul>
+        </li>
+
+        <li class="menu-item-has-children">
+            <a href="#">Online learning</a>
+            <ul class="sub-menu">
+               
+<li class=""><a href="{{ url_for('microx_courses') }}">MicroX </a></li>
+<li class=""><a href="{{ url_for('profx_courses') }}">ProfX </a></li>
+            </ul>
+        </li>
+
+        <li class="menu-item-has-children">
+            <a href="#">Engage with us</a>
+            <ul class="sub-menu">
+               <li class=""> <a href="{{ url_for('recruit') }}">Recruit </a></li>
+            </ul>
+        </li>
+
+        <li class="menu-item-has-children">
+            <a href="#">About BIL</a>
+            <ul class="sub-menu">
+               <li class="leadership-team"> <a href="{{ url_for('leadership_team') }}">Leadership Team </a></li>
+               <li class=""><a href="{{ url_for('history') }}">History </a></li>
+               <li class=""><a href="{{ url_for('mission') }}">Mission  </a></li>
+               <li class=""><a href="{{ url_for('vision') }}">Vision </a></li>
+               
+               <li class=""><a href="{{ url_for('social_impact') }}">Social Impact </a></li>
+            </ul>
+        </li>
+    </ul> 
+ </nav>  

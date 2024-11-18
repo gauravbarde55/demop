@@ -1,0 +1,557 @@
+{% include 'navbar.html' %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head> 
+        <!-- meta tag -->
+        <meta charset="utf-8">
+        <title>BSE BTI</title>
+        <meta name="description" content="">
+        <!-- responsive tag -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.html">
+        <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/fav.png">
+        <!-- Bootstrap v4.4.1 css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+        <!-- font-awesome css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/animate.css">
+        <!-- off canvas css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/off-canvas.css">
+        <!-- linea-font css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/fonts/linea-fonts.css">
+        <!-- flaticon css  -->
+        <link rel="stylesheet" type="text/css" href="static/assets/fonts/flaticon.css">
+        <!-- Main Menu css -->
+        <link rel="stylesheet" href="static/assets/css/rsmenu-main.css">
+        <!-- spacing css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/rs-spacing.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+        <!-- responsive css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/responsive.css">
+
+
+
+        <style>
+
+.widget-title {
+    color: #111111;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 12px;
+}
+
+
+.search-widget {
+    background: #fff;
+    padding: 40px 30px 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+
+.search-wrap {
+    position: relative;
+}
+
+.widget-archives {
+    background: #fff;
+    padding: 40px 30px 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+.widget-archives {
+    background: #fff;
+    padding: 40px 30px 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+        </style>
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="defult-home">
+        
+   
+
+       <!--Full width header Start-->
+       
+        <!--Full width header End-->
+
+		<!-- Main content Start -->
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <div class="breadcrumbs-img">
+                    <img src="static/assets/images/breadcrumbs/post-graduate.png" alt="Breadcrumbs Image">
+                </div>
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">POST GRADUATE COURSES</h1>
+<!--
+                    <ul>
+                        <li>
+                            <a class="active" href="index-2.html">Home</a>
+                        </li>
+                        <li>Course</li>
+                    </ul>
+-->
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Popular Courses Section Start -->
+            <div id="rs-popular-courses" class="rs-popular-courses style1 orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+                <div class="container">
+
+
+  
+
+       
+    <div class="row">
+            <div class="col-lg-4 col-md-6 grid-item filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/PG1.jpg" alt="">
+                    </div>
+                    <!-- <h3 class="title btn-part"><a href="post-graduate/post-graduate-diploma-in-global-financial-markets.html">Post Graduate Diploma in Global Financial Markets</a></h3> -->
+                    <h3 class="title btn-part"><a href="{{ url_for('pg_diploma_in_global_financial_markets') }}">Post Graduate Diploma in Global Financial Markets</a></h3>
+
+                    <div class="content-part">
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 2 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                <!-- <a href="post-graduate/post-graduate-diploma-in-global-financial-markets.html">Know More <i class="flaticon-right-arrow"></i></a> -->
+                                <a href="{{ url_for('pg_diploma_in_global_financial_markets') }}">Know More <i class="flaticon-right-arrow"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/pgimages/12983.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="post-graduate/Post-Graduate-Diploma-in-Cyber-Security.html">Post Graduate Diploma in Cyber Security - PGDCS</a></h3> -->
+					<h3 class="title"><a href="{{ url_for('pg_diploma_in_cyber_security') }}">Post Graduate Diploma in Cyber Security - PGDCS</a></h3>
+
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 1  Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <!-- <a href="post-graduate/Post-Graduate-Diploma-in-Cyber-Security.html">Know More <i class="flaticon-right-arrow"></i></a> -->
+                                <a href="{{ url_for('pg_diploma_in_cyber_security') }}">Know More <i class="flaticon-right-arrow"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter3 filter2">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/pgimages/1776109.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">Graduate</span></li>
+                            <li><a class="categorie" href="#">Graduate</a></li>
+                        </ul> -->
+                     
+                    <!-- <h3 class="title"><a href="post-graduate/post-graduate-diploma-in-predictive-analytics.html">Post Graduate Diploma in Predictive Analytics </a></h3> -->
+                    <h3 class="title"><a href="{{ url_for('pg_diploma_in_predictive_analytics') }}">Post Graduate Diploma in Predictive Analytics </a></h3>
+
+                  <div class="content-part">
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 3 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                <a href="{{ url_for('pg_diploma_in_predictive_analytics') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="row">
+            <div class="col-lg-4 col-md-6 grid-item filter1 filter2">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/pgimages/51822.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">$55.00</span></li>
+                            <li><a class="categorie" href="#">Photography</a></li>
+                        </ul> -->
+                        <!-- <h3 class="title"><a href="post-graduate/post-graduate-diploma-in-financial-technology.html">Post Graduate Diploma in Financial Technology - PGDFT</a></h3> -->
+                        <h3 class="title"><a href="{{ url_for('pg_diploma_in_financial_technology') }}">Post Graduate Diploma in Financial Technology - PGDFT</a></h3>
+
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 3 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+
+
+
+                        <div class="bottom-part">
+                        
+                            <div class="btn-part">
+                                <a href="{{ url_for('pg_diploma_in_financial_technology') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 grid-item filter2 filter4">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/pgimages/53812.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">$55.00</span></li>
+                            <li><a class="categorie" href="#">Web Development</a></li>
+                        </ul> -->
+<!-- <h3 class="title"><a href="post-graduate/post-graduate-program-in-banking-and-finance.html">Post Graduate Program in Banking & Finance - PGPBF</a></h3> -->
+<h3 class="title"><a href="{{ url_for('pg_program_in_banking_and_finance') }}">Post Graduate Program in Banking & Finance - PGPBF</a></h3>
+
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 2 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+
+
+                        <div class="bottom-part">
+                            <!-- <div class="info-meta">
+                                <ul>
+                                    <li class="user"><i class="fa fa-user"></i> 245</li>
+                                    <li class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        (05)
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="btn-part">
+                                <a href="{{ url_for('pg_program_in_banking_and_finance') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter2 filter4">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/LLM2.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">$55.00</span></li>
+                            <li><a class="categorie" href="#">Web Development</a></li>
+                        </ul> -->
+<!-- <h3 class="title"><a href="post-graduate/post-graduate-diploma-in-regulatory-compliance-management.html">Post Graduate Diploma in Regulatory Compliance Management</a></h3> -->
+<h3 class="title"><a href="{{ url_for('pg_diploma_in_regulatory_compliance_management') }}">Post Graduate Diploma in Regulatory Compliance Management</a></h3>
+                        
+<ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 3 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+
+
+                        <div class="bottom-part">
+                            <!-- <div class="info-meta">
+                                <ul>
+                                    <li class="user"><i class="fa fa-user"></i> 245</li>
+                                    <li class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        (05)
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="btn-part">
+                                <a href="{{ url_for('pg_diploma_in_regulatory_compliance_management') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        <div class="row">
+          
+            <div class="col-lg-4 col-md-6 grid-item filter2 filter4">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/profex 1.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">$55.00</span></li>
+                            <li><a class="categorie" href="#">Web Development</a></li>
+                        </ul> -->
+<!-- <h3 class="title"><a href="post-graduate/post-graduate-diploma-in-financial-markets-makaut.html">Post-Graduate Diploma in Financial Markets (MAKAUT CCPTR)</a></h3> -->
+<h3 class="title"><a href="{{ url_for('pg_diploma_in_financial_markets_makaut') }}">Post-Graduate Diploma in Financial Markets (MAKAUT CCPTR)</a></h3>
+                        
+<ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 3 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+
+
+                        <div class="bottom-part">
+                            <!-- <div class="info-meta">
+                                <ul>
+                                    <li class="user"><i class="fa fa-user"></i> 245</li>
+                                    <li class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        (05)
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="btn-part">
+                                <a href="{{ url_for('pg_diploma_in_financial_markets_makaut') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter2 filter4">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/GFMP.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">$55.00</span></li>
+                            <li><a class="categorie" href="#">Web Development</a></li>
+                        </ul> -->
+<!-- <h3 class="title"><a href="post-graduate/mba-in-securities-markets-makaut-nshm.html">MBA in Securities Markets (Makaut & NSHM)</a></h3> -->
+<h3 class="title"><a href="{{ url_for('mba_in_securities_markets_makaut_nshm') }}">MBA in Securities Markets (Makaut & NSHM)</a></h3>
+
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 3 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+
+
+                        <div class="bottom-part">
+                            <!-- <div class="info-meta">
+                                <ul>
+                                    <li class="user"><i class="fa fa-user"></i> 245</li>
+                                    <li class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        (05)
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="btn-part">
+                                <a href="{{ url_for('mba_in_securities_markets_makaut_nshm') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 grid-item filter2 filter4">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/Courses/LLM.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">$55.00</span></li>
+                            <li><a class="categorie" href="#">Web Development</a></li>
+                        </ul> -->
+<!-- <h3 class="title"><a href="post-graduate/llm-in-insolvency-law.html">LL.M. in Insolvency Law</a></h3> -->
+<h3 class="title"><a href="{{ url_for('llm_in_insolvency_law') }}">LL.M. in Insolvency Law</a></h3>
+
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Classroom </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Graduate </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 1 Years</li>
+                            <li><i class="fa fa-map-marker"></i> Location : Mumbai</li>
+                           </ul>
+
+
+
+                        <div class="bottom-part">
+                            <!-- <div class="info-meta">
+                                <ul>
+                                    <li class="user"><i class="fa fa-user"></i> 245</li>
+                                    <li class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        (05)
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="btn-part">
+                                <a href="{{ url_for('llm_in_insolvency_law') }}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+            
+            <!-- <div class="pagination-area orange-color text-center mt-30 md-mt-0">
+                        <ul class="pagination-part">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">Next <i class="fa fa-long-arrow-right"></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <!-- Popular Courses Section End -->
+
+        </div> 
+        <!-- Main content End --> 
+        <div id="footer"></div>
+
+        <!-- start scrollUp  -->
+        <div id="scrollUp" class="orange-color">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- End scrollUp  -->
+
+        <!-- Search Modal Start -->
+        <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="flaticon-cross"></span>
+            </button>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="search-block clearfix">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Search Here..." type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Modal End -->
+
+        <!-- modernizr js -->
+        <script src="static/assets/js/modernizr-2.8.3.min.js"></script>
+        <!-- jquery latest version -->
+        <script src="static/assets/js/jquery.min.js"></script>
+        <!-- Bootstrap v4.4.1 js -->
+        <script src="static/assets/js/bootstrap.min.js"></script>
+        <!-- Menu js -->
+        <script src="static/assets/js/rsmenu-main.js"></script> 
+        <!-- op nav js -->
+        <script src="static/assets/js/jquery.nav.js"></script>
+        <!-- wow js -->
+        <script src="static/assets/js/wow.min.js"></script> 
+        <!-- isotope.pkgd.min js -->
+        <script src="static/assets/js/isotope.pkgd.min.js"></script>
+        <!-- imagesloaded.pkgd.min js -->
+        <script src="static/assets/js/imagesloaded.pkgd.min.js"></script>    
+        <!-- plugins js -->
+        <script src="static/assets/js/plugins.js"></script>
+        <!-- magnific popup js -->
+        <script src="static/assets/js/jquery.magnific-popup.min.js"></script>  
+        <!-- contact form js -->
+        <script src="static/assets/js/contact.form.js"></script>
+        <!-- main js -->
+        <script src="static/assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,191 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <!-- meta tag -->
+     <meta charset="utf-8">
+     <!-- <title>Register</title> -->
+     <meta name="description" content="">
+     <!-- responsive tag -->
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- favicon -->
+     <link rel="apple-touch-icon" href="apple-touch-icon.html">
+     <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/fav.png">
+     <!-- Bootstrap v4.4.1 css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+     <!-- font-awesome css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.min.css">
+     <!-- animate css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/animate.css">
+     <!-- off canvas css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/off-canvas.css">
+     <!-- linea-font css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/fonts/linea-fonts.css">
+     <!-- flaticon css  -->
+     <link rel="stylesheet" type="text/css" href="static/assets/fonts/flaticon.css">
+     <!-- Main Menu css -->
+     <link rel="stylesheet" href="static/assets/css/rsmenu-main.css">
+     <!-- spacing css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/rs-spacing.css">
+     <!-- style css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+     <!-- responsive css -->
+     <link rel="stylesheet" type="text/css" href="static/assets/css/responsive.css">
+
+    <title>Register</title>
+    <style>
+        .dropbtn {
+          /* background-color: #04AA6D; */
+          color: white;
+          /* padding: 16px; */
+          /* font-size: 16px; */
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 120px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        /* .dropdown-content a:hover {background-color: #ddd;} */
+        
+        .dropdown:hover .dropdown-content {display: block;}
+/*         
+        .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+                </style>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errors = [];
+
+            if (username.length < 3 || username.length > 15) {
+                errors.push("Username must be between 3 and 15 characters long.");
+            }
+            // if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+            //     errors.push("Username can only contain letters, numbers, and underscores.");
+            // }
+            if (password.length < 6) {
+                errors.push("Password must be at least 6 characters long.");
+            }
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false;  // Prevent form submission
+            }
+            return true;  // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <!-- Main content Start -->
+    <div class="main-content">
+        <!--Full width header Start-->
+       
+        <!--Full width header End-->
+
+        <!-- Main content Start -->
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <div class="breadcrumbs-img">
+                    <img src="static/assets/images/breadcrumbs/graduate.png" alt="Breadcrumbs Image">
+                </div>
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">Register</h1>
+                    <!--
+                    <ul>
+                        <li>
+                            <a class="active" href="index-2.html">Home</a>
+                        </li>
+                        <li>Course</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Popular Courses Section Start -->
+            <div class="rs-cart orange-color pt-100 pb-100 md-pt-120 md-pb-70">
+                <div class="container">
+                    <div class="cart-wrap">
+
+
+
+
+                        <h1 style="text-align: center;">Register</h1>
+                        <form action="{{ url_for('register') }}" method="POST" onsubmit="return validateForm()" style="text-align: center;">
+                            {% if errors %}
+                            <ul>
+                                {% for error in errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                                {% endif %}
+                            <!-- <div class="row col-md-6"> -->
+                                <!-- <div class="col-md-6"> -->
+                            <!-- <label for="username">Username:</label> -->
+                        <!-- </div> -->
+                         <div class="form-group col-md-12">
+
+                        <div class="row form-group col-md-12 mb-3">
+                            <!-- <div class="col-md-2"></div> -->
+                            <div class="col-md-4">
+                                <label for="username" style="float: right;font-size: large;">Username:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="username" name="username" class="form-control" required>
+
+                            </div>
+                        </div>
+                        <div class="row form-group col-md-12 mb-3">
+                            <!-- <div class="col-md-2"></div> -->
+                            <div class="col-md-4">
+                                <label for="username" style="float: right;font-size: large;">Password:</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="password" id="password" name="password" class="form-control" required>
+
+                            </div>
+                        </div>
+                    </div>
+                        <!-- <div class="col-md-8">
+                            <input type="text" id="username" name="username" class="form-control" style="margin:0 auto; text-align: center;" required>
+                            <input type="text" id="username" name="username" class="form-control col-md-4" style="margin:0 auto; text-align: center;" required>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control col-xs-4" required>
+                            <br>
+                        </div> -->
+                            <button type="submit" class="btn btn-warning">Register</button>
+                        <!-- </div> -->
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

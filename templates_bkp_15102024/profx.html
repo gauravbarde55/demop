@@ -1,0 +1,952 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head> 
+        <!-- meta tag -->
+        <meta charset="utf-8">
+        <title>BSE BTI</title>
+        <meta name="description" content="">
+        <!-- responsive tag -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.html">
+        <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/fav.png">
+        <!-- Bootstrap v4.4.1 css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+        <!-- font-awesome css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/animate.css">
+        <!-- off canvas css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/off-canvas.css">
+        <!-- linea-font css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/fonts/linea-fonts.css">
+        <!-- flaticon css  -->
+        <link rel="stylesheet" type="text/css" href="static/assets/fonts/flaticon.css">
+        <!-- Main Menu css -->
+        <link rel="stylesheet" href="static/assets/css/rsmenu-main.css">
+        <!-- spacing css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/rs-spacing.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+        <!-- responsive css -->
+        <link rel="stylesheet" type="text/css" href="static/assets/css/responsive.css">
+
+
+
+        <style>
+
+.widget-title {
+    color: #111111;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 12px;
+}
+
+
+            .search-widget {
+    background: #fff;
+    padding: 40px 30px 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+
+.search-wrap {
+    position: relative;
+}
+
+.widget-archives {
+    background: #fff;
+    padding: 40px 30px 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+.widget-archives {
+    background: #fff;
+    padding: 40px 30px 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+        </style>d
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="defult-home">
+        
+   
+
+       <!--Full width header Start-->
+       
+        <!--Full width header End-->
+
+		<!-- Main content Start -->
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <div class="breadcrumbs-img">
+                    <img src="static/assets/images/breadcrumbs/profex.png" alt="Breadcrumbs Image">
+                </div>
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">Profx</h1>
+<!--
+                    <ul>
+                        <li>
+                            <a class="active" href="index-2.html">Home</a>
+                        </li>
+                        <li>Course</li>
+                    </ul>
+-->
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Popular Courses Section Start -->
+            <div id="rs-popular-courses" class="rs-popular-courses style1 orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+                <div class="container">
+<div class="row">
+            <div class="col-lg-4 col-md-6 grid-item filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/1.jpg" alt="">
+                    </div>
+                    <!-- <h3 class="title btn-part"><a href="profx/Advanced-Derivatives-Market-Strategies.html">Advanced Derivatives Market Strategies</a></h3> -->
+                    <h3 class="title btn-part"><a href="{{url_for('profx_advanced_derivatives_market_strategies')}}">Advanced Derivatives Market Strategies</a></h3>
+                    <div class="content-part">
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                <a href="{{url_for('profx_advanced_derivatives_market_strategies')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter3 filter2">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/2.jpg" alt="">
+                    </div>
+                    <div class="content-part">
+                        <!-- <ul class="meta-part">
+                            <li><span class="price">Open</span></li>
+                            <li><a class="categorie" href="#">Open</a></li>
+                        </ul> -->
+                     
+                    <!-- <h3 class="title"><a href="profx/advanced-forexs-trading-strategies.html">Advanced Forex Trading Strategies</a></h3> -->
+                    <h3 class="title"><a href="{{url_for('profx_advanced_forex_trading_strategies')}}">Advanced Forex Trading Strategies</a></h3>
+                  <div class="content-part">
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                <a href="{{url_for('profx_advanced_forex_trading_strategies')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/3.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/basic-program-on-stock-markets.html">Basic Program on Stock Markets (Mumbai)</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_basic_program_on_stock_markets')}}">Basic Program on Stock Markets (Mumbai)</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_basic_program_on_stock_markets')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="row">
+
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/4.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/blockchain-for-business-leaders.html">Blockchain for Business Leaders (Mumbai)</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_blockchain_for_business_leaders')}}">Blockchain for Business Leaders (Mumbai)</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_blockchain_for_business_leaders')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/5.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/capital-markets-bootcamp.html">Capital Markets Bootcamp (Mumbai)</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_capital_markets_bootcamp')}}">Capital Markets Bootcamp (Mumbai)</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_capital_markets_bootcamp')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/6.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Certificate-Program-on-Anti-Money-Laundering.html">Certificate Program on Anti Money Laundering</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_certificate_program_on_anti_money_laundering')}}">Certificate Program on Anti Money Laundering</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_certificate_program_on_anti_money_laundering')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="row">
+
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/7.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/certificate-program-on-credit-analysis.html">Certificate Program on Credit Analysis</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_certificate_program_on_credit_analysis')}}">Certificate Program on Credit Analysis</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_certificate_program_on_credit_analysis')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/8.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Certificate-Program-on-Investment-Banking.html">Certificate Program on Investment Banking</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_certificate_program_on_investment_banking')}}">Certificate Program on Investment Banking</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_certificate_program_on_investment_banking')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/9.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Certificate-Program-on-Stock-Market.html">Certificate Program on Stock Market (Advanced Level)</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_certificate_program_on_stock_market')}}">Certificate Program on Stock Market (Advanced Level)</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_certificate_program_on_stock_market')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="row">
+
+             <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/10.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/certificate-program-on-technical-analysis.html">Certificate Program on Technical Analysis</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_certificate_program_on_technical_analysis')}}">Certificate Program on Technical Analysis</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_certificate_program_on_technical_analysis')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/11.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Commodities-and-Currency-Trading-Strategies.html">Commodities and Currency Trading Strategies</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_commodities_and_currency_trading_strategies')}}">Commodities and Currency Trading Strategies</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_commodities_and_currency_trading_strategies')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/12.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Comprehensive-Investing-Strategies-for-Capital-Markets.html">Comprehensive Investing Strategies for Capital Markets</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_comprehensive_investing_strategies_for_capital_markets')}}">Comprehensive Investing Strategies for Capital Markets</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_comprehensive_investing_strategies_for_capital_markets')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="row">
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/13.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/factoring-for-effective-cash-management.html">Factoring - For Effective Cash Management</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_factoring_for_effective_cash_management')}}">Factoring - For Effective Cash Management</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_factoring_for_effective_cash_management')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/14.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Finance-For-Business-Leaders.html">Finance For Business Leaders (Mumbai)</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_finance_for_business_leaders')}}">Finance For Business Leaders (Mumbai)</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_finance_for_business_leaders')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/15.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Financial-Statement-Analysis-Using-Excel.html">Financial Statement Analysis Using Excel</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_financial_statment_analysis_using_excel')}}">Financial Statement Analysis Using Excel</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_financial_statment_analysis_using_excel')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="row">
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/16.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/highspeed-trading-with-algorithms.html">High Speed Trading with Algorithms</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_highspeed_trading_with_algorithms')}}">High Speed Trading with Algorithms</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_highspeed_trading_with_algorithms')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/17.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Mergers-and-Acquisitions-Strategies-and-Execution.html">Mergers and Acquisitions Strategies and Execution</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_mergers_and_acquisitions_strategies_and_execution')}}">Mergers and Acquisitions Strategies and Execution</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_mergers_and_acquisitions_strategies_and_execution')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/18.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Option-Chain-Strategies-for-Intraday-Trading.html">Option Chain Strategies for Intraday Trading</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_option_chain_strategies_for_intraday_trading')}}">Option Chain Strategies for Intraday Trading</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_option_chain_strategies_for_intraday_trading')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="row">
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/19.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Revival-Of-Companies-Under-The-Insolvency-And-Bankruptcy-Code.html">Revival Of Companies Under The Insolvency And Bankruptcy Code</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_orevival_of_companies_under_the_insolvency_and_bankruptcy')}}">Revival Of Companies Under The Insolvency And Bankruptcy Code</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_orevival_of_companies_under_the_insolvency_and_bankruptcy')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/20.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/Using-Financial-Modelling-for-Analysis-and-Valuation.html">Using Financial Modelling for Analysis and Valuation</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_using_financial_modelling_for_analysis_and_valuation')}}">Using Financial Modelling for Analysis and Valuation</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_using_financial_modelling_for_analysis_and_valuation')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+                <div class="courses-item mb-30">
+                    <div class="img-part">
+                        <img src="static/assets/images/profx/21.jpg" alt="">
+                    </div>
+                        
+                    
+                  
+                    
+					<!-- <h3 class="title"><a href="profx/certificate-programon-advanced-treasury-and-oreign-exchange-risk-management.html">Certificate Program on Advanced Treasury and Foreign Exchange Risk Management</a></h3> -->
+					<h3 class="title"><a href="{{url_for('profx_certificate_program_advanced_treasury_and_foreign_exchange_risk_management')}}">Certificate Program on Advanced Treasury and Foreign Exchange Risk Management</a></h3>
+                  <div class="content-part">
+
+
+                    
+                        <ul class="meta-part">
+                        
+                            <li><i class="fa fa-university"></i> Mode : Online </li>
+                            <li><i class="fa fa-book"></i> Eligibility : Open </li>
+                        </ul>
+                        <ul class="meta-part">
+                            <li><span><i class="fa fa-clock-o"></i> Duration :</span> 10 Days
+(ST)</li>
+                            
+                           </ul>
+                        </ul>
+                        
+                        <div class="bottom-part">
+                            
+                            <div class="btn-part">
+                                
+                                <a href="{{url_for('profx_certificate_program_advanced_treasury_and_foreign_exchange_risk_management')}}">Know More <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+</div>
+</div>
+            <!-- Popular Courses Section End -->
+
+        </div> 
+        <!-- Main content End --> 
+
+        <div id="footer"></div>
+
+        <!-- start scrollUp  -->
+        <div id="scrollUp" class="orange-color">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- End scrollUp  -->
+
+        <!-- Search Modal Start -->
+        <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="flaticon-cross"></span>
+            </button>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="search-block clearfix">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Search Here..." type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Modal End -->
+
+        <!-- modernizr js -->
+        <script src="static/assets/js/modernizr-2.8.3.min.js"></script>
+        <!-- jquery latest version -->
+        <script src="static/assets/js/jquery.min.js"></script>
+        <!-- Bootstrap v4.4.1 js -->
+        <script src="static/assets/js/bootstrap.min.js"></script>
+        <!-- Menu js -->
+        <script src="static/assets/js/rsmenu-main.js"></script> 
+        <!-- op nav js -->
+        <script src="static/assets/js/jquery.nav.js"></script>
+        <!-- wow js -->
+        <script src="static/assets/js/wow.min.js"></script> 
+        <!-- isotope.pkgd.min js -->
+        <script src="static/assets/js/isotope.pkgd.min.js"></script>
+        <!-- imagesloaded.pkgd.min js -->
+        <script src="static/assets/js/imagesloaded.pkgd.min.js"></script>    
+        <!-- plugins js -->
+        <script src="static/assets/js/plugins.js"></script>
+        <!-- magnific popup js -->
+        <script src="static/assets/js/jquery.magnific-popup.min.js"></script>  
+        <!-- contact form js -->
+        <script src="static/assets/js/contact.form.js"></script>
+        <!-- main js -->
+        <script src="static/assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+    <head> 
+            <!-- meta tag -->
+            <meta charset="utf-8">
+            <title>BSE Institute</title>
+            <meta name="description" content="">
+            <!-- responsive tag -->
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Enquiry Form JS and CSS Start-->
+            <script src="/static/assets/js/Enquiry_Form.js"></script>
+            <link rel="stylesheet" type="text/css" href="../static/assets/css/Enquiry_form.css">
+            <!-- Enquiry Form JS and CSS End-->
+
+            <!-- favicon -->
+            <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+            <link rel="shortcut icon" type="image/x-icon" href="../static/assets/images/fav.png">
+            <!-- Bootstrap v4.4.1 css -->
+            <!-- <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"> -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
+            <!-- font-awesome css -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css">
+            <!-- animate css -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/css/animate.css">
+            <!-- off canvas css -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/css/off-canvas.css">
+            <!-- linea-font css -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/fonts/linea-fonts.css">
+            <!-- flaticon css  -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/fonts/flaticon.css">
+            <!-- magnific popup css -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/css/magnific-popup.css">
+            <!-- Main Menu css -->
+            <link rel="stylesheet" href="/static/assets/css/rsmenu-main.css">
+            <!-- spacing css -->
+            <link rel="stylesheet" type="text/css" href="../static/assets/css/rs-spacing.css">
+            <!-- style css -->
+            <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"> This stylesheet dynamically changed from style.less -->
+            <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+            <!-- responsive css -->
+            <link rel="stylesheet" type="text/css" href="../static/assets/css/responsive.css">
+            <style>
+                .modal-dialog {
+        top: 75px;}
+            </style>
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+    </head>
+    <body class="defult-home">
+        <div class="main-content">
+            <!-- Breadcrumbs Start -->
+            <div class="rs-breadcrumbs breadcrumbs-overlay">
+                <!-- <div class="breadcrumbs-img">
+                    <img src="static/assets/images/breadcrumbs/graduate.png" alt="Breadcrumbs Image">
+                </div> -->
+                <div class="breadcrumbs-text white-color">
+                    <h1 class="page-title">Payment</h1>
+                    <!--
+                    <ul>
+                        <li>
+                            <a class="active" href="index-2.html">Home</a>
+                        </li>
+                        <li>Course</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <!-- Breadcrumbs End -->
+
+            <!-- Popular Courses Section Start -->
+            <div class="rs-cart orange-color pt-100 pb-100 md-pt-120 md-pb-70">
+                <div class="container">
+                    <div class="cart-wrap">
+
+
+
+
+                        <h1 style="text-align: center;">Transaction Details</h1>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table align="center" border="1px solid" cellpadding="5px" cellspacing="5px">
+            <tr style="border: none;">
+                <td colspan="2" style="text-align: center;">
+                    {% if payment_errors %}
+                            <ul>
+                                {% for error in payment_errors %}
+                                    <li><label class="alert alert-success" style="font-size: large; width: 500px;height: 50px;">{{ error }}</label></li>
+                                {% endfor %}
+                            </ul>
+                                {% endif %}
+
+                </td>
+                    
+            </tr>
+            <tr style="border-top: 1px solid;">
+                <td>Payemnt Status </td>
+                <td>{{txn_status_data['STATUS']}}</td>
+            </tr>
+            <tr>
+                <td>BANK NAME</td>
+                <td>{{txn_status_data['BANKNAME']}}</td>
+            </tr>
+            <tr>
+                <td>Bank TXN ID</td>
+                <td>{{txn_status_data['BANKTXNID']}}</td>
+            </tr>
+            
+            <tr>
+                <td>TXN AMOUNT</td>
+                <td>{{txn_status_data['TXNAMOUNT']}} {{txn_status_data['CURRENCY']}}</td>
+            </tr>
+            <tr>
+                <td>TXN ID</td>
+                <td>{{txn_status_data['TXNID']}}</td>
+            </tr>
+            <tr>
+                <td>TXN DATE</td>
+                <td>{{txn_status_data['TXNDATE']}}</td>
+            </tr>
+            <tr style="border: none;">
+                <!-- <td></td> -->
+                <td colspan="2" style="text-align: center;"><a href="{{url_for('index')}}" style="color: blue;">Back to Home</a></td>
+            </tr>
+        </table>
+        <!-- {{session}} -->
+        <!-- {{txn_status_data}} -->
+    </body>
+</html>

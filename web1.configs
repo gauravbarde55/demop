@@ -1,0 +1,48 @@
+
+<configuration>
+  <system.webServer>
+    <handlers>
+            <add name="FlaskHandler" path="*" verb="*" modules="FastCgiModule" scriptProcessor="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\python.exe|E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\wfastcgi.py" resourceType="Unspecified" requireAccess="Execute" />
+      <add name="Python FastCGI" path="app.py" verb="*" modules="FastCgiModule" scriptProcessor="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\python.exe|E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\wfastcgi.py" resourceType="Unspecified" requireAccess="Script" />
+    </handlers>
+    <rewrite>
+      <rules>
+        <rule name="Flask" stopProcessing="true">
+          <match url="^(.*)$" />
+          <action type="Rewrite" url="sqltest.py" />
+          <!-- <action type="Rewrite" url="app.py" /> -->
+        </rule>
+      </rules>
+    </rewrite>
+        <staticContent>
+            <mimeMap fileExtension=".py" mimeType="application/x-python" />
+        </staticContent>
+  </system.webServer>
+</configuration>
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+            <add name="FlaskHandler" path="*" verb="*" modules="FastCgiModule" scriptProcessor="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\python.exe|E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\wfastcgi.py" resourceType="Unspecified" />
+      <add name="PythonHandler" path="*." verb="*" modules="FastCgiModule" scriptProcessor="E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\python.exe|E:\Inetpub\Bsebti\BSEBTI_New_Latest\demop\wfastcgi.py" resourceType="Unspecified" />
+    </handlers>
+        <security>
+            <requestFiltering>
+                <fileExtensions>
+                    <add fileExtension=".py" allowed="true" />
+                </fileExtensions>
+            </requestFiltering>
+        </security>
+        <staticContent>
+            <mimeMap fileExtension=".py" mimeType="text/x-python" />
+            <mimeMap fileExtension=".pyc" mimeType="application/x-python-code" />
+        </staticContent>
+        <defaultDocument>
+            <files>
+                <add value="wfastcgi.py" />
+            </files>
+        </defaultDocument>
+  </system.webServer>
+</configuration> -->
